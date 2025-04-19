@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="relative">
+    <header
+      class="w-full bg-white main-header transition-all ease-in-out duration-300 px-5 lg:!px-0 flex justify-center h-[65px] lg:!h-[92px] items-center"
+    >
+      <div
+        class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-row-reverse lg:!flex-row justify-between items-center"
+      >
+        <a href="/" class="z-50 logo-anchor">
+          <img
+            loading="lazy"
+            width="152"
+            height="60"
+            src="../../images/logo.png"
+            aria-label="navbaran-logo"
+            alt="navbaran-logo"
+            class="w-[110px] h-[40px]"
+          />
+        </a>
+        <button class="flex lg:!hidden open-menu" type="button">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M20 20.5H4C3.448 20.5 3 20.053 3 19.5C3 18.947 3.448 18.5 4 18.5H20C20.552 18.5 21 18.947 21 19.5C21 20.053 20.552 20.5 20 20.5Z"
+              fill="#1647A9"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M20 6.5H4C3.448 6.5 3 6.053 3 5.5C3 4.947 3.448 4.5 4 4.5H20C20.552 4.5 21 4.947 21 5.5C21 6.053 20.552 6.5 20 6.5Z"
+              fill="#1647A9"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M20 13.5H4C3.448 13.5 3 13.053 3 12.5C3 11.947 3.448 11.5 4 11.5H20C20.552 11.5 21 11.947 21 12.5C21 13.053 20.552 13.5 20 13.5Z"
+              fill="#1647A9"
+            />
+          </svg>
+        </button>
+        <nav class="hidden lg:!flex items-center lg:w-[357px] justify-between">
+          <a
+            href="/"
+            class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+            >خانه</a
+          >
+          <a
+            href="/"
+            class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+            >تور ها</a
+          >
+          <a
+            href="/"
+            class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+            >مجله گردشگری</a
+          >
+          <a
+            href="/"
+            class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+            >ارتباط با ما</a
+          >
+        </nav>
+        <a
+          href=""
+          class="lg:!flex hidden w-[163px] h-12 bg-primary-900 rounded-lg"
+        ></a>
+      </div>
+    </header>
+    <nav
+      class="w-screen z-30 h-screen translate-x-[7000px] transition-all duration-300 ease-in-out fixed lg:!hidden flex flex-col items-center top-0 left-0 menu-mob"
+    >
+      <button type="button" class="nav-closer absolute top-8 right-7">
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 13 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.81295 6.50009L12.7277 1.58528C13.0908 1.22221 13.0908 0.635366 12.7277 0.2723C12.3646 -0.0907666 11.7778 -0.0907666 11.4148 0.2723L6.5 5.18711L1.58525 0.2723C1.22219 -0.0907666 0.635353 -0.0907666 0.272294 0.2723C-0.0907647 0.635366 -0.0907647 1.22221 0.272294 1.58528L5.18704 6.50009L0.272294 11.415C-0.0907647 11.778 -0.0907647 12.3649 0.272294 12.7279C0.453359 12.909 0.691065 13 0.928771 13C1.16648 13 1.40418 12.909 1.58525 12.7279L6.5 7.81317L11.4148 12.7279C11.5958 12.909 11.8335 13 12.0712 13C12.3089 13 12.5466 12.909 12.7277 12.7279C13.0908 12.3649 13.0908 11.778 12.7277 11.415L7.81295 6.50009Z"
+            fill="#1647A9"
+          ></path>
+        </svg>
+      </button>
+      <div class="flex flex-col items-center justify-center gap-20 pt-32">
+        <a
+          href="/"
+          class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+          >خانه</a
+        >
+        <a
+          href="/"
+          class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+          >تور ها</a
+        >
+        <a
+          href="/"
+          class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+          >مجله گردشگری</a
+        >
+        <a
+          href="/"
+          class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
+          >ارتباط با ما</a
+        >
+      </div>
+    </nav>
+    <main>
+      <section class="w-full px-5 flex justify-center items-center h-[467px]">
+        <div class="w-full h-full relative rounded-[45px] overflow-hidden">
+          <img
+            width="2808"
+            height="701"
+            src="../../images/blogs.jpg"
+            alt="blogs"
+            class="object-cover w-full h-full"
+          />
+          <span
+            class="absolute w-full h-full z-0 top-0 left-0 bg-[#06012FCC]"
+          ></span>
+          <div
+            class="absolute w-full h-full top-0 left-0 z-20 flex justify-center items-center flex-col"
+          >
+            <h1 class="txt-gr text-8xl font-bold">Blog</h1>
+            <h2 class="font-bold text-white text-4xl mt-[-14px]">
+              مجله گردشگری
+            </h2>
+            <form
+              action=""
+              class="w-[735px] items-center p-2 h-[70px] bg-white flex rounded-lg mt-4"
+            >
+              <input
+                type="text"
+                placeholder="جستجوی مقاله"
+                required
+                class="w-[80%] bg-zinc-100 rounded-lg placeholder:text-zinc-400 text-zinc-400 px-5 h-full border-0 outline-none focus:border-0"
+              />
+              <button
+                class="w-[142px] hover:bg-[#06012FCC] hover:shadow-xl rounded-lg h-full flex justify-center items-center bg-primary-900 text-white"
+                type="submit"
+              >
+                جستجو
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="w-full flex my-8 justify-center">
+        <div
+          class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-3"
+        >
+          <div class="w-full flex justify-between">
+            <ul class="flex items-center gap-[3px]">
+              <li>
+                <a href="/" class="text-zinc-700 text-sm hover:text-primary-700"
+                  >خانه</a
+                >
+              </li>
+              <li class="text-zinc-700 text-sm">></li>
+              <li class="text-zinc-700 text-sm">مقاله های گردشگری</li>
+            </ul>
+            <div class="text-zinc-700 flex items-center gap-1">
+              <p class="number-of-ptoducts"></p>
+              <span>مورد</span>
+            </div>
+          </div>
+          <h3 class="font-bold text-2xl my-2">اخبار داغ</h3>
+          <article class="!flex gap-4">
+            <div class="w-[58%] flex flex-col gap-4">
+              <p class="line-clamp-1 font-bold">بهترین زمان برای تهیه تور</p>
+              <p class="line-clamp-[8] text-zinc-700 text-sm">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع لورم ایپسوم متن ساختگی با تولید سادگی
+                نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است لورم
+                ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                مورد نیاز، و کاربردهای متنوع لورم ایپسوم متن ساختگی با تولید
+                سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
+              </p>
+              <div class="flex w-full items-center gap-5">
+                <div class="flex items-center gap-3">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.00263 2.33203C4.87338 2.33203 2.33594 4.86888 2.33594 7.9987C2.33594 11.1279 4.87341 13.6654 8.00263 13.6654C11.1324 13.6654 13.6693 11.1279 13.6693 7.9987C13.6693 4.86884 11.1324 2.33203 8.00263 2.33203ZM1.33594 7.9987C1.33594 4.31652 4.32116 1.33203 8.00263 1.33203C11.6848 1.33203 14.6693 4.31656 14.6693 7.9987C14.6693 11.6802 11.6848 14.6654 8.00263 14.6654C4.32112 14.6654 1.33594 11.6802 1.33594 7.9987Z"
+                      fill="#A1A1AA"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.77344 4.73047C8.04964 4.73047 8.27344 4.95433 8.27344 5.23047V7.96988L10.8016 8.01121C11.0778 8.01574 11.2979 8.24321 11.2934 8.51928C11.2889 8.79541 11.0614 9.01561 10.7853 9.01108L7.7653 8.96174C7.49237 8.95728 7.27344 8.73474 7.27344 8.46181V5.23047C7.27344 4.95433 7.4973 4.73047 7.77344 4.73047Z"
+                      fill="#A1A1AA"
+                    />
+                  </svg>
+                  <p class="text-zinc-400 text-sm">2 دقیقه</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.48828 10.668H20.5298"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.1445 3V5.96174"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.875 3V5.96174"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.3203 4.42188H8.69999C6.05641 4.42188 4.40625 5.89399 4.40625 8.59984V16.7456C4.40625 19.4943 6.05641 21.0004 8.69999 21.0004H16.3125C18.9639 21.0004 20.6063 19.5205 20.6063 16.8137V8.59984C20.614 5.89399 18.9717 4.42188 16.3203 4.42188Z"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.7812 15.5039H16.6237"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.39453 15.5039H8.80805"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-zinc-400 text-sm">1 اردیبهشت 1404</p>
+                </div>
+              </div>
+              <a
+                href=""
+                class="text-white hover:bg-secondary transition-all hover:animate-pulse h-12 w-[146px] flex justify-center items-center bg-primary-900 rounded-lg mt-24"
+                >بیشتر بخوانید</a
+              >
+            </div>
+            <div class="w-[40%] flex flex-col gap-4">
+              <img
+                width="563"
+                height="392"
+                src="../../images/majale.png"
+                alt=""
+                class="h-[392px] w-full rounded-[34px]"
+              />
+            </div>
+          </article>
+          <div
+            class="w-full p-5 rounded-3xl bg-primary-50 flex flex-col gap-4 my-8"
+          >
+            <p class="text-2xl font-bold">دیگر اخبار</p>
+            <ul class="flex gap-2 items-center">
+              <li
+                class="px-6 py-3 rounded-full bg-transparent border border-primary-300 text-primary-700 hover:border-primary-900 hover:bg-primary-900 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+              >
+                همه اخبار
+              </li>
+              <li
+                class="px-6 py-3 rounded-full bg-transparent border border-primary-300 text-primary-700 hover:border-primary-900 hover:bg-primary-900 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+              >
+                تور
+              </li>
+              <li
+                class="px-6 py-3 rounded-full bg-transparent border border-primary-300 text-primary-700 hover:border-primary-900 hover:bg-primary-900 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+              >
+                ویزا
+              </li>
+              <li
+                class="px-6 py-3 rounded-full bg-transparent border border-primary-300 text-primary-700 hover:border-primary-900 hover:bg-primary-900 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+              >
+                هتل
+              </li>
+            </ul>
+            <div class="w-full grid mt-2 grid-cols-4 gap-4">
+              <a
+                href=""
+                class="bg-white flex flex-col justify-between hover:bg-primary-100 hover:border-primary-500 border border-zinc-300 rounded-3xl h-[300px] p-2"
+              >
+                <img
+                  class="w-full rounded-[28px] h-[177px]"
+                  src="../../images/eram.jfif"
+                  alt="er"
+                  height="177"
+                  width="283"
+                />
+                <p class="font-bold line-clamp-1">اقامت جدید دبی</p>
+                <p class="text-zinc-700 text-sm line-clamp-3">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم
+                </p>
+              </a>
+              <a
+                href=""
+                class="bg-white flex flex-col justify-between hover:bg-primary-100 hover:border-primary-500 border border-zinc-300 rounded-3xl h-[300px] p-2"
+              >
+                <img
+                  class="w-full rounded-[28px] h-[177px]"
+                  src="../../images/eram.jfif"
+                  alt="er"
+                  height="177"
+                  width="283"
+                />
+                <p class="font-bold line-clamp-1">اقامت جدید دبی</p>
+                <p class="text-zinc-700 text-sm line-clamp-3">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم
+                </p>
+              </a>
+              <a
+                href=""
+                class="bg-white flex flex-col justify-between hover:bg-primary-100 hover:border-primary-500 border border-zinc-300 rounded-3xl h-[300px] p-2"
+              >
+                <img
+                  class="w-full rounded-[28px] h-[177px]"
+                  src="../../images/eram.jfif"
+                  alt="er"
+                  height="177"
+                  width="283"
+                />
+                <p class="font-bold line-clamp-1">اقامت جدید دبی</p>
+                <p class="text-zinc-700 text-sm line-clamp-3">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم
+                </p>
+              </a>
+              <a
+                href=""
+                class="bg-white flex flex-col justify-between hover:bg-primary-100 hover:border-primary-500 border border-zinc-300 rounded-3xl h-[300px] p-2"
+              >
+                <img
+                  class="w-full rounded-[28px] h-[177px]"
+                  src="../../images/eram.jfif"
+                  alt="er"
+                  height="177"
+                  width="283"
+                />
+                <p class="font-bold line-clamp-1">اقامت جدید دبی</p>
+                <p class="text-zinc-700 text-sm line-clamp-3">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="w-full flex gap-4 my-3 justify-center items-center">
+            <a
+              href=""
+              class="w-12 h-12 rounded-full flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+            >
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.25 12.2743L5.25 12.2743"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+
+            <a
+              href=""
+              class="w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+              >1
+            </a>
+            <a
+              href=""
+              class="w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+              >2
+            </a>
+            <a
+              href=""
+              class="w-12 h-12 rounded-full rotate-180 flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+            >
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.25 12.2743L5.25 12.2743"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="flex flex-col my-4 w-full gap-4">
+            <h4 class="font-bold text-2xl">درباره ما</h4>
+            <p class="text-zinc-700 text-sm">
+              چین یکی از کشورهای بزرگ و پرجمعیت دنیاست که دارای تاریخ و فرهنگ
+              بسیار غنی و متنوعی می‌باشد؛ افراد بسیاری هر ساله مشتاق به
+              دریافت تور چین و سفر به این کشور هستند. چین با داشتن جاذبه‌های
+              طبیعی، تاریخی، فرهنگی و مدرن مقصدی بسیار محبوب و جذاب برای
+              گردشگران سراسر جهان است. ایرانیان برای سفر به چین ملزم به
+              دریافت ویزای چین هستند که به این منظور باید شرایط دریافت ویزا را
+              داشته باشند.
+            </p>
+          </div>
+          <div class="w-full grid grid-cols-3 gap-16 my-5">
+            <div class="w-full flex items-center gap-3">
+              <img
+                width="140"
+                height="165"
+                src="../../images/poshtibani.png"
+                alt="poshtibani"
+                class="w-[70px] h-[82px]"
+              />
+              <div class="flex flex-col gap-2">
+                <b>پشتیبانی تمام وقت</b>
+                <span class="text-sm text-zinc-700"
+                  >متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی
+                  گرافیک</span
+                >
+              </div>
+            </div>
+
+            <div class="w-full flex items-center gap-3">
+              <img
+                width="156"
+                height="164"
+                src="../../images/reserv-s.png"
+                alt="reserv"
+                class="w-[70px] h-[82px]"
+              />
+              <div class="flex flex-col gap-2">
+                <b>رزرو آسان بلیط</b>
+                <span class="text-sm text-zinc-700"
+                  >متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی
+                  گرافیک</span
+                >
+              </div>
+            </div>
+
+            <div class="w-full flex items-center gap-3">
+              <img
+                width="186"
+                height="163"
+                src="../../images/bazgasht-ani.png"
+                alt="return"
+                class="w-[93px] h-[81px]"
+              />
+              <div class="flex flex-col gap-2">
+                <b>بازگشت آنی وجه</b>
+                <span class="text-sm text-zinc-700"
+                  >متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی
+                  گرافیک</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-5 w-full">
+      <div
+        class="w-full lg:!px-0 px-5 py-[30px] flex justify-center bg-[#F0F2F5] lg:!rounded-[45px] rounded-[25px]"
+      >
+        <div
+          class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-3"
+        >
+          <img
+            loading="lazy"
+            width="152"
+            height="60"
+            src="../../images/logo.png"
+            aria-label="navbaran-logo"
+            alt="navbaran-logo"
+            class="w-[123px] h-[48px]"
+          />
+          <div
+            class="flex items-center lg:!justify-start justify-center gap-8 pt-4 pb-6 border-b-[1.5px] border-zinc-300 w-full"
+          >
+            <a
+              href="/"
+              class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
+              >خانه</a
+            >
+            <a
+              href="/"
+              class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
+              >تور ها</a
+            >
+            <a
+              href="/"
+              class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
+              >مجله گردشگری</a
+            >
+            <a
+              href="/"
+              class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
+              >ارتباط با ما</a
+            >
+          </div>
+          <div
+            class="w-full flex lg:!mt-4 lg:!flex-row flex-col-reverse gap-4 lg:!gap-7"
+          >
+            <div class="flex lg:!w-[48%] w-full flex-col gap-4">
+              <p class="text-primary-950 font-bold lg:!text-2xl text-base">
+                درباره ما
+              </p>
+              <p class="text-zinc-600 lg:!text-base text-sm">
+                متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک
+                گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی
+                برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته
+                شده استفاده می نماید
+              </p>
+            </div>
+            <div class="flex lg:!w-[48%] w-full flex-col gap-4">
+              <p class="text-primary-950 font-bold lg:!text-2xl text-base">
+                ارتباط با ما
+              </p>
+
+              <div class="flex items-center gap-4">
+                <svg
+                  width="29"
+                  height="30"
+                  viewBox="0 0 29 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.4987 13.6877C13.0729 13.6877 11.9129 12.5277 11.9129 11.1019C11.9129 9.67607 13.0729 8.51607 14.4987 8.51607C15.9245 8.51607 17.0845 9.67607 17.0845 11.1019C17.0845 12.5277 15.9245 13.6877 14.4987 13.6877ZM14.4987 3.69482C10.3783 3.69482 7.03125 7.04191 7.03125 11.1623C7.03125 16.2736 12.8675 21.3123 14.4987 21.3123C16.1179 21.3123 21.9541 16.2736 21.9541 11.1623C21.9541 7.04191 18.607 3.69482 14.4987 3.69482Z"
+                    fill="#1647A9"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22.7355 18.7022C22.2993 18.4557 21.7459 18.6128 21.5018 19.049C21.2565 19.4852 21.4112 20.0374 21.8486 20.2827C22.7851 20.8083 23.301 21.3956 23.301 21.9381C23.301 22.6667 22.3911 23.2866 21.8305 23.602C21.4619 23.8195 21.0499 24.0104 20.5678 24.1868C17.2376 25.4205 11.7796 25.4229 8.4373 24.1844C7.99143 24.0225 7.56005 23.8231 7.15284 23.5911C6.60909 23.2878 5.69922 22.6679 5.69922 21.9381C5.69922 21.2059 6.60909 20.5872 7.15284 20.2827C7.58905 20.0374 7.74372 19.4852 7.49964 19.049C7.25434 18.6128 6.70334 18.4581 6.26472 18.7022C4.29997 19.8042 3.88672 21.0693 3.88672 21.9381C3.88672 22.8045 4.29997 24.0696 6.26109 25.1704C6.75289 25.4495 7.2773 25.6912 7.81259 25.8857C9.67464 26.5757 12.0514 26.9563 14.5044 26.9563C16.9597 26.9563 19.3365 26.5757 21.1937 25.8869C21.7773 25.6755 22.2872 25.4374 22.7355 25.1716C24.7003 24.0684 25.1135 22.8045 25.1135 21.9381C25.1135 21.0705 24.7003 19.8054 22.7355 18.7022Z"
+                    fill="#1647A9"
+                  />
+                </svg>
+                <p
+                  class="text-zinc-600 lg:!w-fit w-[204px] lg:!text-base text-sm"
+                >
+                  تهران - میدان شهدا - دانشگاه 3 - صاحب الزمان 28 - مجتمع رضوان
+                  - طبقه 4 - واحد 406
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <svg
+                  width="27"
+                  height="28"
+                  viewBox="0 0 27 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.0742 9.20498H11.9242C11.4584 9.20498 11.0805 8.82698 11.0805 8.36123C11.0805 7.89548 11.4584 7.51748 11.9242 7.51748H15.0742C15.5399 7.51748 15.9179 7.89548 15.9179 8.36123C15.9179 8.82698 15.5399 9.20498 15.0742 9.20498ZM13.4992 21.2425C12.8996 21.2425 12.4304 20.7734 12.4304 20.1737C12.4304 19.5617 12.9952 19.105 13.4992 19.105C14.0043 19.105 14.5679 19.5617 14.5679 20.1737C14.5679 20.7857 14.0043 21.2425 13.4992 21.2425ZM16.5929 3.63623H10.4055C7.86184 3.63623 5.79297 5.70511 5.79297 8.24761V20.3987C5.79297 22.9424 7.86184 25.0112 10.4055 25.0112H16.5929C19.1366 25.0112 21.2054 22.9424 21.2054 20.3987V8.24761C21.2054 5.70511 19.1366 3.63623 16.5929 3.63623Z"
+                    fill="#1647A9"
+                  />
+                </svg>
+                <a
+                  href="tel:02191300545"
+                  class="text-zinc-600 lg:!text-base text-sm transition-all hover:text-primary-700"
+                  >02191300545</a
+                >
+              </div>
+              <div class="flex items-center gap-4">
+                <svg
+                  width="27"
+                  height="28"
+                  viewBox="0 0 27 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.0742 9.20498H11.9242C11.4584 9.20498 11.0805 8.82698 11.0805 8.36123C11.0805 7.89548 11.4584 7.51748 11.9242 7.51748H15.0742C15.5399 7.51748 15.9179 7.89548 15.9179 8.36123C15.9179 8.82698 15.5399 9.20498 15.0742 9.20498ZM13.4992 21.2425C12.8996 21.2425 12.4304 20.7734 12.4304 20.1737C12.4304 19.5617 12.9952 19.105 13.4992 19.105C14.0043 19.105 14.5679 19.5617 14.5679 20.1737C14.5679 20.7857 14.0043 21.2425 13.4992 21.2425ZM16.5929 3.63623H10.4055C7.86184 3.63623 5.79297 5.70511 5.79297 8.24761V20.3987C5.79297 22.9424 7.86184 25.0112 10.4055 25.0112H16.5929C19.1366 25.0112 21.2054 22.9424 21.2054 20.3987V8.24761C21.2054 5.70511 19.1366 3.63623 16.5929 3.63623Z"
+                    fill="#1647A9"
+                  />
+                </svg>
+                <a
+                  href="mailto:Support @ gmail.com"
+                  class="text-zinc-600 transition-all lg:!text-base text-sm hover:text-primary-700"
+                  >Support @ gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex w-full gap-4 lg:!gap-7 lg:!flex-row flex-col-reverse"
+          >
+            <div
+              class="flex flex-wrap lg:!gap-x-3 gap-x-12 lg:!flex-nowrap items-center gap-4 w-full lg:!w-[50%]"
+            >
+              <a
+                href=""
+                class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
+              >
+                <img
+                  loading="lazy"
+                  width="48"
+                  height="50"
+                  src="../../images/samandehi.png"
+                  alt="samandehi"
+                />
+              </a>
+              <a
+                href=""
+                class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
+              >
+                <img
+                  loading="lazy"
+                  width="48"
+                  height="50"
+                  src="../../images/havapeymaii.png"
+                  alt="havapeyma"
+              /></a>
+              <a
+                href=""
+                class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
+              ></a>
+              <a
+                href=""
+                class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
+                ><img
+                  loading="lazy"
+                  width="48"
+                  height="50"
+                  src="../../images/pax.png"
+                  alt="pax"
+              /></a>
+              <a
+                href=""
+                class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
+                ><img
+                  loading="lazy"
+                  width="48"
+                  height="50"
+                  src="../../images/farhangi.png"
+                  alt="farhangi"
+              /></a>
+              <a
+                href=""
+                class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
+                ><img
+                  loading="lazy"
+                  width="48"
+                  height="50"
+                  src="../../images/lata.png"
+                  alt="lata"
+              /></a>
+            </div>
+            <div
+              class="flex lg:!flex-row flex-col lg:items-center gap-4 w-full lg:!w-[48%] justify-between"
+            >
+              <p class="text-primary-950 font-bold lg:!text-2xl text-base">
+                ما رو اینجا دنبال کنید
+              </p>
+              <div class="flex gap-6 items-center">
+                <a
+                  href="twiiter"
+                  class="hover:scale-125 transition-all duration-200"
+                >
+                  <svg
+                    width="30"
+                    height="31"
+                    viewBox="0 0 30 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.308 7.12245C26.1808 6.92325 25.9504 6.81165 25.7128 6.85125L23.3092 7.20885C22.6312 6.45045 20.5552 4.51605 17.6908 5.38245C15.2104 6.14325 14.0296 8.78085 13.9588 10.7944C10.8832 10.2304 8.01277 8.71605 5.81437 6.48405C5.65717 6.32445 5.42317 6.26565 5.20717 6.33285C4.99117 6.40005 4.83277 6.58245 4.79557 6.80445C3.69757 13.336 5.11597 17.6956 9.25597 20.4316C7.71877 21.2788 5.95597 21.7144 4.22077 21.652C3.98317 21.6508 3.76597 21.7768 3.66277 21.9892C3.55837 22.2004 3.58957 22.4536 3.74077 22.636C5.51917 24.7744 8.86957 25.5076 11.5396 25.5076C11.848 25.5076 12.1468 25.498 12.4336 25.48C16.3216 25.2376 19.5268 23.632 21.7024 20.8348C23.7628 18.1864 24.76 14.5468 24.5092 10.5568L24.502 10.498L26.302 7.77525C26.4328 7.57845 26.4352 7.32165 26.308 7.12245Z"
+                      fill="#1647A9"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="insta"
+                  class="hover:scale-125 transition-all duration-200"
+                  ><svg
+                    width="26"
+                    height="27"
+                    viewBox="0 0 26 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.8397 10.8159C11.261 10.8159 9.97656 12.0982 9.97656 13.6759C9.97656 15.2536 11.261 16.5359 12.8397 16.5359C14.4185 16.5359 15.7018 15.2536 15.7018 13.6759C15.7018 12.0982 14.4185 10.8159 12.8397 10.8159Z"
+                      fill="#1647A9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.0636 9.598C17.4708 9.598 16.9872 9.11752 16.9872 8.52784C16.9872 7.93608 17.4708 7.4556 18.0636 7.4556C18.6564 7.4556 19.1389 7.93608 19.1389 8.52784C19.1389 9.11752 18.6564 9.598 18.0636 9.598ZM12.8428 18.0958C10.405 18.0958 8.42068 16.1136 8.42068 13.6758C8.42068 11.2381 10.405 9.25584 12.8428 9.25584C15.2816 9.25584 17.2648 11.2381 17.2648 13.6758C17.2648 16.1136 15.2816 18.0958 12.8428 18.0958ZM17.3907 3.45264H8.61828C5.33292 3.45264 3.125 5.76352 3.125 9.20384V17.4614C3.125 20.9007 5.33292 23.2126 8.61828 23.2126H17.3896C20.676 23.2126 22.885 20.9007 22.885 17.4614V9.20384C22.885 5.76352 20.6771 3.45264 17.3907 3.45264Z"
+                      fill="#1647A9"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="linked"
+                  class="hover:scale-125 transition-all duration-200"
+                  ><svg
+                    width="26"
+                    height="27"
+                    viewBox="0 0 26 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.18 16.7542C18.18 17.1848 17.8306 17.5342 17.4 17.5342C16.9695 17.5342 16.62 17.1848 16.62 16.7542V13.2078C16.62 12.1637 15.7735 11.315 14.7324 11.315C13.6914 11.315 12.8448 12.1637 12.8448 13.2078V16.7542C12.8448 17.1848 12.4954 17.5342 12.0648 17.5342C11.6343 17.5342 11.2848 17.1848 11.2848 16.7542V13.2078C11.2848 11.3036 12.8313 9.75504 14.7324 9.75504C16.6336 9.75504 18.18 11.3036 18.18 13.2078V16.7542ZM8.611 10.7326C8.18044 10.7326 7.79356 10.3416 7.79356 9.91104C7.79356 9.48048 8.18044 9.08944 8.611 9.08944C9.04156 9.08944 9.42636 9.48048 9.42636 9.91104C9.42636 10.3416 9.04156 10.7326 8.611 10.7326ZM9.38996 16.7542C9.38996 17.1848 9.04052 17.5342 8.60996 17.5342C8.1794 17.5342 7.82996 17.1848 7.82996 16.7542V12.8324C7.82996 12.4018 8.1794 12.0524 8.60996 12.0524C9.04052 12.0524 9.38996 12.4018 9.38996 12.8324V16.7542ZM17.3907 3.45264H8.61932C5.33292 3.45264 3.125 5.76456 3.125 9.20384V17.4614C3.125 20.9007 5.33292 23.2126 8.61932 23.2126H17.3896C20.676 23.2126 22.885 20.9007 22.885 17.4614V9.20384C22.885 5.76456 20.6771 3.45264 17.3907 3.45264Z"
+                      fill="#1647A9"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="telegram"
+                  class="hover:scale-125 transition-all duration-200"
+                  ><svg
+                    width="22"
+                    height="19"
+                    viewBox="0 0 22 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.5721 14.2923L9.17594 16.519C8.88263 16.7925 8.40527 16.5679 8.43231 16.1675C8.50719 15.0359 8.62367 13.3168 8.70167 12.3611C8.71415 12.2103 8.84103 12.0418 8.9617 11.9326C11.7603 9.39499 14.5652 6.86363 17.3691 4.3302C17.4731 4.2366 17.5958 4.00572 17.5313 3.88404C17.4585 3.74676 17.1226 3.78836 16.9832 3.87572C13.4223 6.11796 9.8613 8.35915 6.30551 10.6087C6.08711 10.7459 5.81983 10.7792 5.57439 10.7002C4.10799 10.2291 2.63327 9.78291 1.16375 9.31907C0.825753 9.21195 0.424313 9.10587 0.385833 8.68675C0.345273 8.24891 0.720713 8.04091 1.05975 7.90467C2.42631 7.35347 3.80223 6.82619 5.17607 6.2958C10.1182 4.39156 15.0603 2.48836 20.0023 0.585159C20.1677 0.521719 20.3882 0.482199 20.5608 0.447879C21.0787 0.343879 21.5447 0.603879 21.5956 1.12804C21.6341 1.5118 21.5665 1.93924 21.4864 2.31884C20.4568 7.21619 19.4137 12.1115 18.3716 17.0078C18.0908 18.3307 17.4107 18.5813 16.3155 17.7732C14.9043 16.7311 11.5721 14.2923 11.5721 14.2923Z"
+                      fill="#1647A9"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="youtub"
+                  class="hover:scale-125 transition-all duration-200"
+                  ><svg
+                    width="30"
+                    height="31"
+                    viewBox="0 0 30 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.3186 16.3697L13.9122 18.8777C13.7286 18.9773 13.5318 19.0265 13.3374 19.0265C13.1298 19.0265 12.9246 18.9701 12.7398 18.8597C12.3845 18.6485 12.1721 18.2777 12.1721 17.8649V12.8477C12.1721 12.4277 12.3905 12.0486 12.7554 11.8386C13.1178 11.6286 13.5498 11.6262 13.9146 11.8362L18.3186 14.3441C18.681 14.5481 18.9066 14.9381 18.9066 15.3557C18.9066 15.7757 18.681 16.1633 18.3186 16.3697ZM25.8762 9.19136C25.5654 7.90736 24.5958 6.88016 23.3466 6.50456C21.2262 5.80496 8.60092 5.84456 6.66652 6.54656C5.41252 6.90416 4.43692 7.93616 4.13572 9.18656C3.42532 11.2638 3.42532 19.4753 4.12492 21.5297C4.47292 22.7837 5.44732 23.7761 6.62692 24.1037C7.66492 24.4805 11.3717 24.6665 15.057 24.6665C18.7182 24.6665 22.3602 24.4829 23.337 24.1157C24.591 23.7437 25.5642 22.7129 25.8606 21.4817C26.5686 19.4441 26.571 11.2542 25.8762 9.19136Z"
+                      fill="#1647A9"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="aparat"
+                  class="hover:scale-125 transition-all duration-200"
+                  ><svg
+                    width="30"
+                    height="31"
+                    viewBox="0 0 30 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.934 13.7909C19.8236 14.2061 19.5596 14.5505 19.1888 14.7641C18.9452 14.9021 18.6764 14.9729 18.404 14.9729C18.26 14.9729 18.116 14.9537 17.9744 14.9153C17.5676 14.8097 17.2232 14.5493 17.0096 14.1821C16.7936 13.8137 16.736 13.3805 16.8476 12.9653C17.072 12.1157 17.9516 11.6045 18.8036 11.8265L18.8096 11.8277C19.6568 12.0653 20.1608 12.9449 19.934 13.7909ZM18.5024 19.1321C18.3116 19.8461 17.66 20.3202 16.9496 20.3202C16.8164 20.3202 16.682 20.3045 16.5476 20.2686C15.6944 20.031 15.188 19.1514 15.4148 18.3054C15.5276 17.8902 15.7964 17.5445 16.1696 17.3321C16.538 17.1221 16.9652 17.0669 17.3732 17.181C17.7824 17.2877 18.1268 17.5505 18.3416 17.9189C18.5576 18.2921 18.6128 18.7217 18.5024 19.1321ZM14.588 12.3641C14.4752 12.7781 14.2076 13.1237 13.8332 13.3361C13.5908 13.4741 13.322 13.5449 13.052 13.5449C12.9092 13.5449 12.7676 13.5257 12.6284 13.4873C12.2216 13.3806 11.8773 13.1177 11.6625 12.7493C11.4477 12.3773 11.39 11.9465 11.5016 11.5349C11.726 10.6853 12.5984 10.1789 13.4576 10.3997L13.4612 10.4009C14.3096 10.6373 14.8148 11.5169 14.588 12.3641ZM13.1564 17.7029C12.9656 18.4169 12.3141 18.8921 11.6061 18.8921C11.4717 18.8921 11.3372 18.8753 11.2016 18.8405C10.3484 18.6041 9.84205 17.7221 10.0688 16.8761C10.1804 16.4621 10.4457 16.1153 10.8165 15.9041C11.1849 15.6917 11.6121 15.6389 12.0273 15.7529C12.4377 15.8597 12.7808 16.1201 12.9956 16.4861C13.2092 16.8569 13.2668 17.2877 13.1564 17.7029ZM17.2592 6.91732C15.0092 6.31612 12.6596 6.62212 10.6424 7.78612C8.62525 8.95012 7.18405 10.8293 6.58165 13.0793C5.97925 15.3317 6.28885 17.6837 7.45645 19.7009C8.62045 21.7145 10.5009 23.1522 12.746 23.7498C13.4996 23.9526 14.2628 24.0534 15.0224 24.0534C16.5308 24.0534 18.02 23.6574 19.3616 22.8833C21.3776 21.7193 22.82 19.8402 23.4236 17.589C24.026 15.3366 23.7152 12.9845 22.5488 10.9661C21.3836 8.95372 19.5056 7.51612 17.2592 6.91732Z"
+                      fill="#1647A9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M22.8215 22.6833C22.3343 22.5525 21.8471 22.8417 21.7187 23.3195C21.3515 24.6899 19.9331 25.5045 18.5603 25.1433C18.0815 25.0125 17.5883 25.3031 17.4599 25.7819C17.3327 26.2617 17.6183 26.7549 18.0983 26.8823C18.4739 26.9819 18.8507 27.0297 19.2227 27.0297C21.1583 27.0297 22.9355 25.7373 23.4575 23.7863C23.5871 23.3063 23.3003 22.8117 22.8215 22.6833Z"
+                      fill="#1647A9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.0087 22.0511C6.3451 21.8759 5.7907 21.4499 5.4463 20.8559C5.1007 20.2583 5.0083 19.5623 5.1871 18.8939C5.3167 18.4139 5.0311 17.9207 4.5511 17.7911C4.0627 17.6651 3.5779 17.9495 3.4483 18.4271C3.1447 19.5611 3.3007 20.7443 3.8887 21.7583C4.4743 22.7699 5.4187 23.4911 6.5467 23.7899C6.6247 23.8115 6.7015 23.8211 6.7783 23.8211C7.1767 23.8211 7.5403 23.5547 7.6471 23.1515C7.7755 22.6715 7.4887 22.1771 7.0087 22.0511Z"
+                      fill="#1647A9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.1078 8.91093C25.5234 7.90053 24.579 7.18053 23.451 6.88173C22.971 6.75333 22.479 7.04013 22.3506 7.52013C22.2234 8.00013 22.509 8.49333 22.989 8.62053C23.6526 8.79573 24.207 9.22053 24.5502 9.81333C24.897 10.4109 24.9894 11.1093 24.8106 11.7789C24.6834 12.2589 24.9678 12.751 25.4478 12.8806C25.5258 12.901 25.6038 12.9106 25.6806 12.9106C26.079 12.9106 26.4414 12.6454 26.5494 12.2421C26.853 11.1081 26.6958 9.92613 26.1078 8.91093Z"
+                      fill="#1647A9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.18357 7.98229C7.26037 8.00389 7.33957 8.01229 7.41517 8.01229C7.81357 8.01229 8.17717 7.74829 8.28517 7.34509C8.65237 5.97469 10.0756 5.16229 11.4424 5.52229C11.9176 5.65669 12.4144 5.36629 12.5428 4.88389C12.67 4.40389 12.3844 3.91069 11.9044 3.78349C9.56557 3.16429 7.16677 4.55509 6.54637 6.88069C6.41797 7.36069 6.70357 7.85389 7.18357 7.98229Z"
+                      fill="#1647A9"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center mt-3 gap-5 w-full lg:!flex-row flex-col"
+          >
+            <div
+              class="lg:!w-[30%] w-full flex lg:!justify-start justify-center"
+            >
+              <a
+                class="text-zinc-500 text-sm text-center lg:!text-start"
+                href="https://www.basisfly.com/"
+                target="_blank"
+                >طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس فلای</a
+              >
+            </div>
+            <div
+              class="flex items-center w-full lg:!w-[80%] justify-center gap-4 lg:!justify-between"
+            >
+              <a href="https://www.basisfly.com/" target="_blank">
+                <img
+                  loading="lazy"
+                  loading="lazy"
+                  width="102"
+                  height="26"
+                  class="w-[68px] h-[17px]"
+                  src="../../images/basisfly-logo.png"
+                  alt="basisfly-logo"
+                  aria-label="basisfly-logo"
+                />
+              </a>
+              <img
+                loading="lazy"
+                loading="lazy"
+                width="135"
+                height="23"
+                src="../../images/Trust_logo.png"
+                alt="Trust_logo"
+                class="w-[68px] h-[17px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+  <script src="../../js/navbaran-core.js"></script>
+</html>

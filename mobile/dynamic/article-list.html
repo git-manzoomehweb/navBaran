@@ -1,0 +1,705 @@
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="213840"
+>
+  <member
+    name="all-articles"
+    type="list"
+    link="article.bc"
+    propertyid=""
+    perpage="20"
+    pageno="[##cms.query.pagenum|(1)##]"
+    order="ord"
+    size="283x177"
+  />
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="[##cms.query.catid##]"
+>
+  <member
+    name="bannerimage"
+    type="tree"
+    request="cat"
+    parentid=""
+    postsql="select * from [db.bannerimage] where catid = [##cms.query.catid##]"
+  />
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="18"
+  name="db"
+  usedforid="[##cms.query.catid##]"
+>
+  <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="[##cms.query.catid##]"
+>
+  <member
+    name="navigation"
+    type="tree"
+    request="navcatid"
+    parentid="[##cms.query.catid##]"
+  />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="another-news">
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="214242"
+    order="ord"
+  ></member>
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  name="db"
+  mid="1"
+  lid="1"
+  catid="[##cms.query.gid|(214298)##]"
+>
+  <member
+    name="gid-list"
+    link="article.bc"
+    size="563x392"
+    propertyid="7244,7248,7249,3087661"
+    type="list"
+  />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="new">
+  <member
+    name="cat-news"
+    type="tree"
+    request="cat"
+    parentid="[##cms.query.catid##]"
+    order="ord"
+  />
+</basis>
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <title>
+      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری ناوبران)##]
+    </title>
+    <meta
+      name="description"
+      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری  ناوبران)##]"
+    />
+    <basis
+      core="dbsource"
+      source="hosting"
+      name="tag"
+      urlid="[##cms.seo.urlid##]"
+    >
+      <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+      <face filter="key = 'canonical'">
+        <link rel="canonical" href="@value" />
+      </face>
+      <face>
+        <meta property="@key" content="@value" />
+      </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+    <link
+      rel="stylesheet"
+      href="[##cms.cms.cdn##]/_css/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="relative">
+    <basis core="call" file="header.inc" />
+    <main>
+      <section class="w-full px-5 flex justify-center items-center h-[373px]">
+        <div class="w-full h-full relative rounded-[24px]">
+          <img
+            width="2808"
+            height="701"
+            src="[##cms.cms.cdn##]/images/blogs.jpg"
+            alt="blogs"
+            class="object-cover w-full h-full rounded-[24px]"
+          />
+          <span
+            class="absolute w-full rounded-[24px] h-full z-0 top-0 left-0 bg-[#06012FCC]"
+          ></span>
+          <div
+            class="absolute w-full h-full top-0 left-0 z-20 flex justify-center items-center flex-col"
+          >
+            <h1 class="txt-gr text-4xl font-bold">Blogs</h1>
+            <basis core="print" datamembername="db.scalar">
+              <face>
+                <h2 class="font-bold text-white text-xl">@column1</h2>
+              </face>
+            </basis>
+
+            <form
+              id="search-content-article"
+              action=""
+              class="seraching-form flex-col justify-between search-content relative w-[95%] gap-3 items-center p-2 h-[135px] bg-white flex rounded-lg mt-4"
+            >
+              <input
+                id="search-content-name"
+                autocomplete="off"
+                type="text"
+                placeholder="جستجوی مقاله"
+                required
+                class="w-full bg-zinc-100 h-[54px] rounded-lg placeholder:text-zinc-400 text-zinc-400 px-5 border-0 outline-none focus:border-0"
+              />
+              <button
+                class="w-full hover:bg-[#06012FCC] hover:shadow-xl rounded-lg h-[54px] flex justify-center items-center bg-primary-900 text-white"
+                type="submit"
+              >
+                جستجو
+              </button>
+              <input type="hidden" value="1" name="lid" />
+              <input id="catidsearched" type="hidden" value="0" name="id" />
+              <ul
+                class="flex-col absolute hidden w-full search-drop-down bg-white rounded-xl"
+              >
+                <basis core="list" datamembername="db.all-articles">
+                  <face>
+                    <li onclick="contentSearched('@title','@id')">
+                      @title
+                      <span class="hidden linkspan">/@link</span>
+                    </li>
+                  </face>
+                  <face filter="link is null">
+                    <li onclick="contentSearched('@title','@id')">
+                      @title
+                      <span class="hidden linkspan"
+                        >/article.bc?lid=1&id=@id</span
+                      >
+                    </li>
+                  </face>
+                </basis>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="w-full flex my-8 justify-center">
+        <div
+          class="w-full px-5 lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-3"
+        >
+          <div class="w-full flex justify-between">
+            <ul class="flex items-center gap-[3px]">
+              <li>
+                <a href="/" class="text-sm text-zinc-700 hover:text-primary-700"
+                  >خانه</a
+                >
+              </li>
+              <li class="text-zinc-700 text-sm">></li>
+              <basis core="print" datamembername="db.navigation">
+                <face filter="RowNumber=max(RowNumber) and parentcatid<>213738">
+                  <li
+                    class="text-zinc-700 hover:text-primary-700 text-sm"
+                    itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem"
+                  >
+                    <span itemprop="name">@title</span
+                    ><meta itemprop="position" content="@rownumber" />
+                  </li>
+                </face>
+                <face filter="link is null and parentcatid<>213738">
+                  <li
+                    class="text-zinc-700 hover:text-primary-700 text-sm"
+                    itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem"
+                  >
+                    <a
+                      class="text-zinc-700 hover:text-primary-700 text-sm"
+                      itemprop="item"
+                      href="/tour-list.bc?catid=@parentcatid"
+                      aria-label="@title"
+                      ><span itemprop="name">@title</span
+                      ><meta itemprop="position" content="@rownumber"
+                    /></a>
+                    <span class="text-zinc-700 text-sm"> > </span>
+                  </li>
+                </face>
+                <face filter="parentcatid<>213738">
+                  <li
+                    class="text-zinc-700 hover:text-primary-700 text-sm"
+                    itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem"
+                  >
+                    <a
+                      class="text-zinc-700 hover:text-primary-700 text-sm"
+                      itemprop="item"
+                      href="@link"
+                      aria-label="@title"
+                      ><span class="text-white" itemprop="name">@title</span
+                      ><meta itemprop="position" content="@rownumber"
+                    /></a>
+                    <span class="text-zinc-700 text-sm"> > </span>
+                  </li>
+                </face>
+              </basis>
+            </ul>
+            <div class="text-zinc-700 flex items-center gap-1">
+              <basis core="print" datamembername="new.cat-news">
+                <face filter="catid=[##cms.query.catid##]"> @countid </face>
+              </basis>
+              <span>مورد</span>
+            </div>
+          </div>
+          <h3 class="font-bold text-2xl my-2">اخبار داغ</h3>
+
+          <basis core="print" datamembername="db.gid-list">
+            <layout>
+              <section class="mt-7 flex w-full justify-center">
+                <div class="w-full overflow-hidden">
+                  <div class="swiper-one relative flex flex-col gap-12 mt-2">
+                    <div class="swiper-wrapper">@child</div>
+                  </div>
+                </div>
+              </section>
+            </layout>
+            <face filter="link is null and id<>2376285">
+              <div class="swiper-slide !flex flex-col-reverse gap-4">
+                <div class="w-full flex flex-col gap-4">
+                  <p class="line-clamp-1 font-bold">@title</p>
+                  <div class="line-clamp-[8] h-160p text-zinc-700 text-sm">
+                    @prp_7244
+                  </div>
+                  <div class="flex w-full items-center gap-5">
+                    <div class="flex items-center gap-3">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.00263 2.33203C4.87338 2.33203 2.33594 4.86888 2.33594 7.9987C2.33594 11.1279 4.87341 13.6654 8.00263 13.6654C11.1324 13.6654 13.6693 11.1279 13.6693 7.9987C13.6693 4.86884 11.1324 2.33203 8.00263 2.33203ZM1.33594 7.9987C1.33594 4.31652 4.32116 1.33203 8.00263 1.33203C11.6848 1.33203 14.6693 4.31656 14.6693 7.9987C14.6693 11.6802 11.6848 14.6654 8.00263 14.6654C4.32112 14.6654 1.33594 11.6802 1.33594 7.9987Z"
+                          fill="#A1A1AA"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.77344 4.73047C8.04964 4.73047 8.27344 4.95433 8.27344 5.23047V7.96988L10.8016 8.01121C11.0778 8.01574 11.2979 8.24321 11.2934 8.51928C11.2889 8.79541 11.0614 9.01561 10.7853 9.01108L7.7653 8.96174C7.49237 8.95728 7.27344 8.73474 7.27344 8.46181V5.23047C7.27344 4.95433 7.4973 4.73047 7.77344 4.73047Z"
+                          fill="#A1A1AA"
+                        />
+                      </svg>
+                      <p class="text-zinc-400 text-sm">@prp_3087661</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.48828 10.668H20.5298"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.1445 3V5.96174"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.875 3V5.96174"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.3203 4.42188H8.69999C6.05641 4.42188 4.40625 5.89399 4.40625 8.59984V16.7456C4.40625 19.4943 6.05641 21.0004 8.69999 21.0004H16.3125C18.9639 21.0004 20.6063 19.5205 20.6063 16.8137V8.59984C20.614 5.89399 18.9717 4.42188 16.3203 4.42188Z"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.7812 15.5039H16.6237"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.39453 15.5039H8.80805"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <p class="pure-date hidden">@prp_7249</p>
+                      <p class="text-zinc-400 text-sm main-date"></p>
+                    </div>
+                  </div>
+                  <a
+                    href="/article.bc?lid=1&id=@id"
+                    class="text-white hover:bg-secondary transition-all hover:animate-pulse h-12 w-full flex justify-center items-center bg-primary-900 rounded-lg mt-2"
+                    >بیشتر بخوانید</a
+                  >
+                </div>
+                <div class="w-full flex flex-col gap-4">
+                  <img
+                    loading="lazy"
+                    width="563"
+                    height="392"
+                    src="@00563X00392prp"
+                    alt="@title"
+                    class="h-[201px] w-full rounded-[34px]"
+                  />
+                </div>
+              </div>
+            </face>
+            <face filter="id<>2376285">
+              <div class="swiper-slide !flex flex-col-reverse gap-4">
+                <div class="w-full flex flex-col gap-4">
+                  <p class="line-clamp-1 font-bold">@title</p>
+                  <div class="line-clamp-[8] h-160p text-zinc-700 text-sm">
+                    @prp_7244
+                  </div>
+                  <div class="flex w-full items-center gap-5">
+                    <div class="flex items-center gap-3">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.00263 2.33203C4.87338 2.33203 2.33594 4.86888 2.33594 7.9987C2.33594 11.1279 4.87341 13.6654 8.00263 13.6654C11.1324 13.6654 13.6693 11.1279 13.6693 7.9987C13.6693 4.86884 11.1324 2.33203 8.00263 2.33203ZM1.33594 7.9987C1.33594 4.31652 4.32116 1.33203 8.00263 1.33203C11.6848 1.33203 14.6693 4.31656 14.6693 7.9987C14.6693 11.6802 11.6848 14.6654 8.00263 14.6654C4.32112 14.6654 1.33594 11.6802 1.33594 7.9987Z"
+                          fill="#A1A1AA"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.77344 4.73047C8.04964 4.73047 8.27344 4.95433 8.27344 5.23047V7.96988L10.8016 8.01121C11.0778 8.01574 11.2979 8.24321 11.2934 8.51928C11.2889 8.79541 11.0614 9.01561 10.7853 9.01108L7.7653 8.96174C7.49237 8.95728 7.27344 8.73474 7.27344 8.46181V5.23047C7.27344 4.95433 7.4973 4.73047 7.77344 4.73047Z"
+                          fill="#A1A1AA"
+                        />
+                      </svg>
+                      <p class="text-zinc-400 text-sm">@prp_3087661</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.48828 10.668H20.5298"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.1445 3V5.96174"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.875 3V5.96174"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.3203 4.42188H8.69999C6.05641 4.42188 4.40625 5.89399 4.40625 8.59984V16.7456C4.40625 19.4943 6.05641 21.0004 8.69999 21.0004H16.3125C18.9639 21.0004 20.6063 19.5205 20.6063 16.8137V8.59984C20.614 5.89399 18.9717 4.42188 16.3203 4.42188Z"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.7812 15.5039H16.6237"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.39453 15.5039H8.80805"
+                          stroke="#71717A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <p class="pure-date hidden">@prp_7249</p>
+                      <p class="text-zinc-400 text-sm main-date"></p>
+                    </div>
+                  </div>
+                  <a
+                    href="@link"
+                    class="text-white hover:bg-secondary transition-all hover:animate-pulse h-12 w-full flex justify-center items-center bg-primary-900 rounded-lg mt-2"
+                    >بیشتر بخوانید</a
+                  >
+                </div>
+                <div class="w-full flex flex-col gap-4">
+                  <img
+                    loading="lazy"
+                    width="563"
+                    height="392"
+                    src="@00563X00392prp"
+                    alt="@title"
+                    class="h-[201px] w-full rounded-[34px]"
+                  />
+                </div>
+              </div>
+            </face>
+          </basis>
+
+          <div
+            class="w-full relative p-5 rounded-3xl bg-primary-50 flex flex-col gap-4"
+          >
+            <p class="text-2xl font-bold mb-3">دیگر اخبار</p>
+            <basis
+              core="tree"
+              datamembername="another-news.cat"
+              idcol="catid"
+              parentidcol="parentid"
+              nullvalue="214242"
+            >
+              <layout>
+                <div class="w-full overflow-hidden">
+                  <div class="w-fit overflow-auto no-scrollbar">
+                    <ul
+                      class="flex h-[54px] gap-5 set-ul-load-cats items-center"
+                    >
+                      @child
+                    </ul>
+                  </div>
+                </div>
+              </layout>
+              <face level="end" filter="link is null">
+                <li class=" ">
+                  <input
+                    type="radio"
+                    name="radio"
+                    value="@catid"
+                    id="@catid"
+                    class="size-5 accent-secondary-200 hidden"
+                    aria-label="radio-btn"
+                  />
+                  <label
+                    class="px-6 whitespace-nowrap py-3 rounded-full bg-transparent border border-primary-300 text-primary-700 hover:border-primary-900 hover:bg-primary-900 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+                    for="@catid"
+                    >@title
+                  </label>
+                </li>
+              </face>
+              <face level="end">
+                <li class="">
+                  <input
+                    type="radio"
+                    name="radio"
+                    value="@catid"
+                    id="@catid"
+                    class="size-5 accent-secondary-200 hidden"
+                    aria-label="radio-btn"
+                  />
+                  <label
+                    class="px-6 py-3 whitespace-nowrap rounded-full bg-transparent border border-primary-300 text-primary-700 hover:border-primary-900 hover:bg-primary-900 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+                    for="@catid"
+                    >@title
+                  </label>
+                </li>
+              </face>
+            </basis>
+
+            <div
+              data-catid="[##cms.query.catid##]"
+              class="w-full fetch-content-categories mt-3"
+            ></div>
+          </div>
+
+          <div
+            class="w-full opacity-0 flex gap-4 my-3 justify-center items-center"
+          >
+            <a
+              href=""
+              class="w-12 h-12 rounded-full flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+            >
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.25 12.2743L5.25 12.2743"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+
+            <a
+              href=""
+              class="w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+              >1
+            </a>
+            <a
+              href=""
+              class="w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+              >2
+            </a>
+            <a
+              href=""
+              class="w-12 h-12 rounded-full rotate-180 flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+            >
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.25 12.2743L5.25 12.2743"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                  stroke="#18181B"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="flex flex-col my-4 w-full gap-4">
+            <p class="text-zinc-900 font-bold text-2xl">درباره ما</p>
+            <basis core="print" datamembername="db.info">
+              <face filter="TypeID=144">
+                <div class="text-sm text-zinc-700 line-clamp-5">@largetext</div>
+              </face>
+            </basis>
+          </div>
+          <div class="w-full grid grid-cols-1 gap-16 my-10">
+            <div class="w-full flex items-center gap-3">
+              <img
+                width="140"
+                height="165"
+                src="[##cms.cms.cdn##]/images/poshtibani.png"
+                alt="poshtibani"
+                class="w-[70px] h-[82px]"
+              />
+              <div class="flex flex-col gap-2">
+                <b>پشتیبانی تمام وقت</b>
+                <span class="text-sm text-zinc-700">
+                  پشتیبانی ۲۴ ساعته آژانس گردشگری ناوبران، همراه شما در تمامی
+                  مراحل سفر، از انتخاب تور تا بازگشت به خانه.
+                </span>
+              </div>
+            </div>
+
+            <div class="w-full flex items-center gap-3">
+              <img
+                width="156"
+                height="164"
+                src="[##cms.cms.cdn##]/images/reserv-s.png"
+                alt="reserv"
+                class="w-[70px] h-[82px]"
+              />
+              <div class="flex flex-col gap-2">
+                <b>رزرو آسان بلیط</b>
+                <span class="text-sm text-zinc-700"
+                  >رزرو آسان بلیط، تنها با چند کلیک و پشتیبانی همیشگی، سفری
+                  بی‌دغدغه برای شما فراهم می‌کند.
+                </span>
+              </div>
+            </div>
+
+            <div class="w-full flex items-center gap-3">
+              <img
+                width="186"
+                height="163"
+                src="[##cms.cms.cdn##]/images/bazgasht-ani.png"
+                alt="return"
+                class="w-[93px] h-[81px]"
+              />
+              <div class="flex flex-col gap-2">
+                <b>بازگشت آنی وجه</b>
+                <span class="text-sm text-zinc-700">
+                  بازگشت آنی وجه، تعهد ما به ارائه خدمات مطمئن و بی‌دغدغه به
+                  شماست.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
+
+    <basis core="call" file="footer.inc" />
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="[##cms.query.catid##]"
+>
+  <member
+    name="article-list"
+    type="list"
+    link="article.bc"
+    propertyid="7244,7248"
+    perpage="9"
+    pageno="[##cms.query.pagenum|(1)##]"
+    order="ord"
+    size="283x177"
+  />
+  <member
+    name="paging"
+    type="list"
+    request="paging"
+    count="2"
+    parentname="article-list"
+  />
+</basis>
+
+<basis core="list" datamembername="db.article-list">
+  <else-layout>
+    <div class="w-full flex flex-col mt-20 gap-10 justify-center items-center">
+      <p class="text-base text-primary-900">موردی یافت نشد .</p>
+      <a
+        class="w-fit hover:scale-105 p-3 bg-primary-900 rounded-lg h-16 flex justify-center items-center text-white text-sm"
+        href="/"
+      >
+        بازگشت به صفحه اصلی
+      </a>
+    </div>
+  </else-layout>
+  <layout>
+    <div class="w-full grid grid-cols-1 gap-5">@child</div>
+  </layout>
+  <face filter="link is null">
+    <a
+      href="/article.bc?lid=1&id=@id"
+      class="bg-white flex flex-col justify-between hover:bg-primary-100 hover:border-primary-500 border border-zinc-300 rounded-3xl h-[300px] p-2"
+    >
+      <img
+        loading="lazy"
+        class="w-full rounded-[28px] h-[177px]"
+        src="@00283X00177prp"
+        alt="@title"
+        height="177"
+        width="283"
+      />
+      <p class="font-bold line-clamp-1">@title</p>
+      <p class="text-zinc-700 text-sm line-clamp-3">@prp_7244</p>
+    </a>
+  </face>
+  <face>
+    <a
+      href="@link"
+      class="bg-white flex flex-col justify-between hover:bg-primary-100 hover:border-primary-500 border border-zinc-300 rounded-3xl h-[300px] p-2"
+    >
+      <img
+        loading="lazy"
+        class="w-full rounded-[28px] h-[177px]"
+        src="@00283X00177prp"
+        alt="@title"
+        height="177"
+        width="283"
+      />
+      <p class="font-bold line-clamp-1">@title</p>
+      <p class="text-zinc-700 text-sm line-clamp-3">@prp_7244</p>
+    </a>
+  </face>
+</basis>
+
+<!-- _____________________________paging____________________________________ -->
+
+<!-- _____________________________paging____________________________________ -->
+<div
+  id="paging"
+  class="flex cats-paging-load items-center justify-center gap-2 mt-20"
+>
+  <ul
+    class="flex w-full justify-center items-center gap-3 cd-pagination no-space dir-ltr"
+    id="wibpaging"
+  >
+    <basis core="print" datamembername="db.paging">
+      <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">
+        <li
+          class="w-12 h-12 rounded-full flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group page-no prev-page"
+        >
+          <span
+            class=" "
+            aria-label="angle-left"
+            onclick="FetchPageNumPrev('@page')"
+          >
+            <svg
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.25 12.2743L5.25 12.2743"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+        </li>
+      </face>
+      <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">
+        <li
+          class="page-no prev-page w-12 h-12 rounded-full flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full cursor-pointer"
+            aria-label="angle-left"
+            onclick="FetchPageNumPrev('@page')"
+            ><svg
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.25 12.2743L5.25 12.2743"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+          ></span>
+        </li>
+      </face>
+    </basis>
+    <basis core="print" datamembername="db.paging">
+      <face
+        filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')"
+      >
+        <li
+          class="page-no w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full h-full cursor-pointer page-number bg-Primery-600"
+            data-pagenum="@page"
+            onclick="FetchWithPageNum('@page')"
+            >@page</span
+          >
+        </li>
+      </face>
+      <face
+        filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')"
+      >
+        <li
+          class="page-no w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full h-full cursor-pointer page-number bg-Primery-600"
+            data-pagenum="@page"
+            onclick="FetchWithPageNum('@page')"
+            >@page</span
+          >
+        </li>
+      </face>
+      <face
+        filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') "
+      >
+        <li
+          class="page-no w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full h-full cursor-pointer page-number"
+            data-pagenum="@page"
+            onclick="FetchWithPageNum('@page')"
+            >@page</span
+          >
+        </li>
+      </face>
+      <face
+        filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') "
+      >
+        <li
+          class="page-no w-12 h-12 rounded-full hover:text-white flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full h-full cursor-pointer page-number"
+            data-pagenum="@page"
+            onclick="FetchWithPageNum('@page')"
+            >@page</span
+          >
+        </li>
+      </face>
+    </basis>
+    <basis core="print" datamembername="db.paging">
+      <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">
+        <li
+          class="page-no next-page w-12 h-12 rounded-full rotate-180 flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full h-full cursor-pointer"
+            aria-label="angle-right"
+            onclick="FetchPageNumNext('@page')"
+            ><svg
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.25 12.2743L5.25 12.2743"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+          ></span>
+        </li>
+      </face>
+      <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">
+        <li
+          class="page-no next-page w-12 h-12 rounded-full rotate-180 flex justify-center items-center bg-[#E4E4E7] hover:bg-primary-900 group"
+        >
+          <span
+            class="flex items-center justify-center w-full h-full cursor-pointer"
+            aria-label="angle-right"
+            onclick="FetchPageNumNext('@page')"
+            ><svg
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.25 12.2743L5.25 12.2743"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M14.1992 18.2987L20.2492 12.2747L14.1992 6.2497"
+                stroke="#18181B"
+                class="group-hover:stroke-white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+          ></span>
+        </li>
+      </face>
+    </basis>
+  </ul>
+</div>

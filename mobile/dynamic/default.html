@@ -1,0 +1,836 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="PopularTours">
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="214188"
+    order="ord"
+  ></member>
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="20"
+  name="PopularDestinations"
+>
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="214215"
+    order="ord"
+  ></member>
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="20"
+  name="PopularToursSecond"
+>
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="213829"
+    order="ord"
+  ></member>
+</basis>
+
+<basis
+  core="dbsource"
+  name="db"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  usedforid="2376273"
+>
+  <member name="discount" type="view" />
+</basis>
+<basis
+  core="dbsource"
+  name="db"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  usedforid="2376285"
+>
+  <member name="faq" type="view" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="PopularHotels">
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="214220"
+    order="ord"
+  ></member>
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="214298"
+>
+  <member
+    link="article.bc"
+    name="Tourism-Magazine"
+    type="list"
+    size="563x392"
+    propertyid="7244,7248,7249,3087661"
+    perpage=""
+    typeid="159"
+    order="ord"
+  />
+</basis>
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <!-- Title & Description -->
+    <title>رزرو هتل | خرید بلیط هواپیما | رزرو تور | ناوبران</title>
+    <meta
+      name="description"
+      content="آژانس گردشگری ناوبران معتبر برای رزرو
+    آنلاین بلیط هواپیما، تورهای شگفت‌انگیز و هتل‌های لوکس. بهترین قیمت‌ها و
+    خدمات حرفه‌ای برای تجربه سفری بی‌نظیر."
+    />
+    <!-- canonical for Homepage -->
+    <link
+      rel="canonical"
+      href="[##cms.request.:scheme##]://[##cms.request.full-url##]"
+    />
+    <!-- fill items with Agancy Info -->
+    <meta name="og:locale" content="fa_IR" />
+    <meta
+      property="og:title"
+      content="رزرو هتل | خرید بلیط هواپیما | رزرو تور | ناوبران"
+    />
+    <meta
+      property="og:url"
+      content="[##cms.request.:scheme##]://[##cms.request.full-url##]"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ناوبران" />
+    <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png" />
+    <meta property="og:image:alt" content="لوگو شرکت ناوبران" />
+    <meta
+      property="og:description"
+      content="آژانس گردشگری ناوبران معتبر برای رزرو آنلاین بلیط هواپیما، تورهای شگفت‌انگیز و هتل‌های لوکس. بهترین قیمت‌ها و خدمات حرفه‌ای برای تجربه سفری بی‌نظیر. "
+    />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content=" " />
+    <meta name="twitter:creator" content="NAVBARAN" />
+    <meta name="twitter:image" content="[##cms.cms.cdn##]/images/logo.png" />
+    <meta name="twitter:title" content=" " />
+    <meta name="twitter:description" content=" " />
+    <meta property="seo:robots" content="index, follow" />
+    <!-- samandehi-enamad optional -->
+    <meta name="enamad" content="" />
+    <meta name="samandehi" content="" />
+    <!-- pwa metatags -->
+    <basis core="call" file="pwa.inc" />
+    <!-- define -->
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="[##cms.cms.cdn##]/images/search-bg-mob.png"
+      fetchpriority="high"
+    />
+    <link
+      rel="stylesheet"
+      href="[##cms.cms.cdn##]/_css/swiper-bundle.min.css"
+    />
+
+    <!-- common styles for all page -->
+    <basis core="call" file="style.inc" />
+  </head>
+  <body class="relative mobile">
+    <basis core="call" file="header.inc" />
+    <main class="w-full">
+      <h1 class="sr-only">ناوبران</h1>
+      <section class="px-5 w-full">
+        <div
+          class="serachmob-bg bg-cover flex justify-center rounded-[24px] bg-center w-full h-full"
+        >
+          <div class="w-full h-full justify-between flex flex-col items-end">
+            <div class="h-full w-full relative">
+              <img
+                loading="lazy"
+                src="[##cms.cms.cdn##]/images/airplane-mob.png"
+                alt="airplane"
+                class="w-full h-[124px] mt-20"
+                width="288"
+                height="126"
+              />
+            </div>
+            <div class="w-full pt-12 pb-2 px-2 z-0">
+              <div class="w-full rounded-[24px] search-box-container">
+                <div id="search-box" class="w-full flex justify-center">
+                  <span class="loader"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-9 pr-5 mt-20 flex w-full justify-center">
+        <div
+          class="w-full overflow-hidden lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-4"
+        >
+          <basis core="print" datamembername="PopularTours.cat">
+            <face filter="catid in(214188)">
+              <h2 class="text-zinc-900 font-bold text-base">@title</h2>
+              <p class="text-sm text-zinc-900">@urldescription</p>
+            </face>
+          </basis>
+          <div class="w-full overflow-hidden">
+            <div
+              class="w-full my-4 gap-5 flex justify-between overflow-auto no-scrollbar items-center"
+            >
+              <basis
+                core="tree"
+                datamembername="PopularTours.cat"
+                idcol="catid"
+                parentidcol="parentid"
+                nullvalue="214188 "
+              >
+                <layout>
+                  <ul class="flex gap-5">
+                    @child
+                  </ul>
+                </layout>
+                <face>
+                  <li
+                    data-id="@catid"
+                    class="text-center whitespace-nowrap tourmob-li flex px-6 py-2 bg-primary-50 hover:border-primary-900 rounded-3xl text-primary-700 hover:text-white hover:bg-primary-900 transition-all cursor-pointer border border-primary-300"
+                  >
+                    @title
+                  </li>
+                </face>
+              </basis>
+              <basis core="print" datamembername="PopularTours.cat">
+                <face filter="catid in(214188)">
+                  <a
+                    href="/@link"
+                    class="text-primary-900 whitespace-nowrap ml-5 hover:text-secondary"
+                    >مشاهده همه</a
+                  >
+                </face>
+              </basis>
+            </div>
+          </div>
+          <div
+            id="tourmob-list-container"
+            class="swiper tourmobSwiper w-full relative flex flex-col gap-12 mt-2"
+          >
+            <div class="swiper-wrapper fetch-content-tourmob"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-9 flex w-full justify-center">
+        <div
+          class="w-full overflow-hidden lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-4"
+        >
+          <basis core="print" datamembername="PopularDestinations.cat">
+            <face filter="catid in(214215)">
+              <h3 class="text-zinc-900 pr-5 font-bold text-base">@title</h3>
+              <p class="text-sm pr-5 text-zinc-900">@urldescription</p>
+            </face>
+          </basis>
+          <div class="w-full overflow-hidden">
+            <div
+              class="w-full my-4 gap-5 flex justify-between overflow-auto no-scrollbar items-center pr-5"
+            >
+              <basis
+                core="tree"
+                datamembername="PopularDestinations.cat"
+                idcol="catid"
+                parentidcol="parentid"
+                nullvalue="214215 "
+              >
+                <layout>
+                  <ul class="flex gap-5">
+                    @child
+                  </ul>
+                </layout>
+                <face>
+                  <li
+                    data-id="@catid"
+                    class="text-center destinationmob-li flex whitespace-nowrap px-6 py-2 bg-primary-50 hover:border-primary-900 rounded-3xl text-primary-700 hover:text-white hover:bg-primary-900 transition-all cursor-pointer border border-primary-300"
+                  >
+                    @title
+                  </li>
+                </face>
+              </basis>
+              <basis core="print" datamembername="PopularDestinations.cat">
+                <face filter="catid in(214215)">
+                  <a
+                    href="/@link"
+                    class="text-primary-900 whitespace-nowrap ml-5 hover:text-secondary"
+                    >مشاهده همه</a
+                  >
+                </face>
+              </basis>
+            </div>
+          </div>
+          <div
+            id="destinationmob-list-container"
+            class="swiper destinationmobSwiper w-full pr-5 relative flex flex-col gap-12 mt-2"
+          >
+            <div class="swiper-wrapper fetch-content-destinationmob"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-9 w-full flex justify-center">
+        <div
+          class="w-full overflow-hidden lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-4"
+        >
+          <basis core="print" datamembername="PopularToursSecond.cat">
+            <face filter="catid in(213829)">
+              <h4 class="text-zinc-900 pr-5 font-bold text-base">@title</h4>
+              <p class="text-sm text-zinc-900 pr-5">@urldescription</p>
+            </face>
+          </basis>
+
+          <div class="w-full overflow-hidden">
+            <div
+              class="w-full my-4 gap-5 flex justify-between overflow-auto no-scrollbar items-center pr-5"
+            >
+              <basis
+                core="tree"
+                datamembername="PopularToursSecond.cat"
+                idcol="catid"
+                parentidcol="parentid"
+                nullvalue="213829 "
+              >
+                <layout>
+                  <ul class="flex gap-5">
+                    @child
+                  </ul>
+                </layout>
+                <face>
+                  <li
+                    data-id="@catid"
+                    class="text-center tourmob2-li whitespace-nowrap flex px-6 py-2 bg-primary-50 hover:border-primary-900 rounded-3xl text-primary-700 hover:text-white hover:bg-primary-900 transition-all cursor-pointer border border-primary-300"
+                  >
+                    @title
+                  </li>
+                </face>
+              </basis>
+              <basis core="print" datamembername="PopularToursSecond.cat">
+                <face filter="catid in(213829)">
+                  <a
+                    href="/@link"
+                    class="text-primary-900 whitespace-nowrap ml-5 hover:text-secondary"
+                    >مشاهده همه</a
+                  >
+                </face>
+              </basis>
+            </div>
+          </div>
+          <div
+            id="tourmobsecond-list-container"
+            class="swiper tourmobsecondSwiper w-full pr-5 relative flex flex-col gap-12 mt-2"
+          >
+            <div class="swiper-wrapper fetch-content-tourmobsecond"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-9 px-5 w-full flex justify-center">
+        <a
+          href="/Discount-code"
+          class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col-reverse gap-4"
+        >
+          <div class="w-full flex flex-col gap-4 mt-5">
+            <basis core="print" datamembername="db.discount">
+              <face filter="TypeID=150">
+                <h5 class="text-base text-zinc-900 font-bold">@text</h5>
+              </face>
+            </basis>
+
+            <basis core="print" datamembername="db.discount">
+              <face filter="TypeID=129">
+                <div class="flex flex-col mt-1 gap-2">
+                  <div class="text-zinc-700 text-sm">@largetext</div>
+                  <b class="text-base">بیشترین تخفیف</b>
+                </div>
+              </face>
+            </basis>
+            <div
+              class="w-full flex p-3 hover:border-white hover:bg-secondary group items-center justify-between h-[68px] mt-[10px] bg-primary-50 border border-dashed border-primary-100 rounded-xl"
+            >
+              <div class="flex flex-col gap-2">
+                <p class="text-sm group-hover:text-white text-zinc-600">
+                  بهترین قیمت
+                </p>
+                <p class="text-sm group-hover:text-white text-zinc-900">
+                  همین الان رزرو کن جا نمونی
+                </p>
+              </div>
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.25 24.2744L31.25 24.2744"
+                  stroke="#445E87"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498"
+                  stroke="#445E87"
+                  class="group-hover:stroke-white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-4">
+            <basis core="print" datamembername="db.discount">
+              <face filter="TypeID=159">
+                <img
+                  width="388"
+                  height="319"
+                  src="@largetext"
+                  alt="discount"
+                  class="w-full h-[319px] rounded-[30px]"
+                />
+              </face>
+            </basis>
+            <div
+              class="bg-zinc-50 gap-1 current-discount !text-primary-500 rounded-xl w-full flex h-[68px] items-center justify-center"
+            >
+              <basis core="print" datamembername="db.discount">
+                <face filter="TypeID=200">
+                  <p class="hidden">@text</p>
+                  <b class="text-xl seT-bold"></b>
+                  <span class="text-base seT-base"></span>
+                </face>
+              </basis>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section class="my-9 flex w-full justify-center">
+        <div
+          class="w-full overflow-hidden lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-4"
+        >
+          <basis core="print" datamembername="PopularHotels.cat">
+            <face filter="catid in(214220)">
+              <h6 class="text-zinc-900 pr-5 font-bold text-base">@title</h6>
+              <p class="text-sm text-zinc-900 pr-5">@urldescription</p>
+            </face>
+          </basis>
+          <div class="w-full overflow-hidden">
+            <div
+              class="w-full my-4 gap-5 flex justify-between overflow-auto no-scrollbar items-center pr-5"
+            >
+              <basis
+                core="tree"
+                datamembername="PopularHotels.cat"
+                idcol="catid"
+                parentidcol="parentid"
+                nullvalue="214220 "
+              >
+                <layout>
+                  <ul class="flex gap-5">
+                    @child
+                  </ul>
+                </layout>
+                <face>
+                  <li
+                    data-id="@catid"
+                    class="text-center hotelmob-li whitespace-nowrap flex px-6 py-2 bg-primary-50 hover:border-primary-900 rounded-3xl text-primary-700 hover:text-white hover:bg-primary-900 transition-all cursor-pointer border border-primary-300"
+                  >
+                    @title
+                  </li>
+                </face>
+              </basis>
+              <basis core="print" datamembername="PopularHotels.cat">
+                <face filter="catid in(214220)">
+                  <a
+                    href="/@link"
+                    class="text-primary-900 whitespace-nowrap ml-5 hover:text-secondary"
+                    >مشاهده همه</a
+                  >
+                </face>
+              </basis>
+            </div>
+          </div>
+          <div
+            id="hotelmob-list-container"
+            class="swiper w-full hotelmobSwiper pr-5 relative flex flex-col gap-12 mt-2"
+          >
+            <div class="swiper-wrapper fetch-content-hotelmob"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <basis core="print" datamembername="db.Tourism-Magazine">
+        <layout>
+          <section class="my-9 flex w-full justify-center">
+            <div
+              class="w-full overflow-hidden px-5 lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col"
+            >
+              <p class="text-zinc-900 font-bold text-base">مجله گردشگری</p>
+              <div class="swiper-one-m h751 relative flex flex-col gap-12 mt-2">
+                <div class="swiper-wrapper mt-7">@child</div>
+              </div>
+            </div>
+          </section>
+        </layout>
+        <face filter="link is null">
+          <a
+            href="/article.bc?lid=1&id=@id"
+            class="swiper-slide !flex flex-col-reverse gap-4"
+          >
+            <div class="w-full flex flex-col gap-4">
+              <p class="line-clamp-1 font-bold">@title</p>
+              <div class="line-clamp-[8] text-zinc-700 text-sm">@prp_7244</div>
+              <div class="flex w-full items-center gap-5">
+                <div class="flex items-center gap-3">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.00263 2.33203C4.87338 2.33203 2.33594 4.86888 2.33594 7.9987C2.33594 11.1279 4.87341 13.6654 8.00263 13.6654C11.1324 13.6654 13.6693 11.1279 13.6693 7.9987C13.6693 4.86884 11.1324 2.33203 8.00263 2.33203ZM1.33594 7.9987C1.33594 4.31652 4.32116 1.33203 8.00263 1.33203C11.6848 1.33203 14.6693 4.31656 14.6693 7.9987C14.6693 11.6802 11.6848 14.6654 8.00263 14.6654C4.32112 14.6654 1.33594 11.6802 1.33594 7.9987Z"
+                      fill="#A1A1AA"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.77344 4.73047C8.04964 4.73047 8.27344 4.95433 8.27344 5.23047V7.96988L10.8016 8.01121C11.0778 8.01574 11.2979 8.24321 11.2934 8.51928C11.2889 8.79541 11.0614 9.01561 10.7853 9.01108L7.7653 8.96174C7.49237 8.95728 7.27344 8.73474 7.27344 8.46181V5.23047C7.27344 4.95433 7.4973 4.73047 7.77344 4.73047Z"
+                      fill="#A1A1AA"
+                    />
+                  </svg>
+
+                  <p class="text-zinc-400 text-sm">@prp_3087661</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.48828 10.668H20.5298"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.1445 3V5.96174"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.875 3V5.96174"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.3203 4.42188H8.69999C6.05641 4.42188 4.40625 5.89399 4.40625 8.59984V16.7456C4.40625 19.4943 6.05641 21.0004 8.69999 21.0004H16.3125C18.9639 21.0004 20.6063 19.5205 20.6063 16.8137V8.59984C20.614 5.89399 18.9717 4.42188 16.3203 4.42188Z"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.7812 15.5039H16.6237"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.39453 15.5039H8.80805"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="pure-date hidden">@prp_7249</p>
+                  <p class="text-zinc-400 text-sm main-date"></p>
+                </div>
+              </div>
+              <div
+                class="text-white hover:bg-secondary transition-all hover:animate-pulse h-12 w-full flex justify-center items-center bg-primary-900 rounded-lg mt-4"
+              >
+                بیشتر بخوانید
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-4">
+              <img
+                width="563"
+                height="392"
+                src="@00563X00392prp"
+                alt="@title"
+                class="h-[392px] w-full rounded-[34px]"
+              />
+            </div>
+          </a>
+        </face>
+        <face>
+          <a href="@link" class="swiper-slide !flex flex-col-reverse gap-4">
+            <div class="w-full flex flex-col gap-4">
+              <p class="line-clamp-1 font-bold">@title</p>
+              <div class="line-clamp-[8] text-zinc-700 text-sm">@prp_7244</div>
+              <div class="flex w-full items-center gap-5">
+                <div class="flex items-center gap-3">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.00263 2.33203C4.87338 2.33203 2.33594 4.86888 2.33594 7.9987C2.33594 11.1279 4.87341 13.6654 8.00263 13.6654C11.1324 13.6654 13.6693 11.1279 13.6693 7.9987C13.6693 4.86884 11.1324 2.33203 8.00263 2.33203ZM1.33594 7.9987C1.33594 4.31652 4.32116 1.33203 8.00263 1.33203C11.6848 1.33203 14.6693 4.31656 14.6693 7.9987C14.6693 11.6802 11.6848 14.6654 8.00263 14.6654C4.32112 14.6654 1.33594 11.6802 1.33594 7.9987Z"
+                      fill="#A1A1AA"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.77344 4.73047C8.04964 4.73047 8.27344 4.95433 8.27344 5.23047V7.96988L10.8016 8.01121C11.0778 8.01574 11.2979 8.24321 11.2934 8.51928C11.2889 8.79541 11.0614 9.01561 10.7853 9.01108L7.7653 8.96174C7.49237 8.95728 7.27344 8.73474 7.27344 8.46181V5.23047C7.27344 4.95433 7.4973 4.73047 7.77344 4.73047Z"
+                      fill="#A1A1AA"
+                    />
+                  </svg>
+
+                  <p class="text-zinc-400 text-sm">@prp_3087661</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.48828 10.668H20.5298"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.1445 3V5.96174"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.875 3V5.96174"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.3203 4.42188H8.69999C6.05641 4.42188 4.40625 5.89399 4.40625 8.59984V16.7456C4.40625 19.4943 6.05641 21.0004 8.69999 21.0004H16.3125C18.9639 21.0004 20.6063 19.5205 20.6063 16.8137V8.59984C20.614 5.89399 18.9717 4.42188 16.3203 4.42188Z"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.7812 15.5039H16.6237"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.39453 15.5039H8.80805"
+                      stroke="#71717A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="pure-date hidden">@prp_7249</p>
+                  <p class="text-zinc-400 text-sm main-date"></p>
+                </div>
+              </div>
+              <div
+                class="text-white hover:bg-secondary transition-all hover:animate-pulse h-12 w-full flex justify-center items-center bg-primary-900 rounded-lg mt-4"
+              >
+                بیشتر بخوانید
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-4">
+              <img
+                width="563"
+                height="392"
+                src="@00563X00392prp"
+                alt="@title"
+                class="h-[392px] w-full rounded-[34px]"
+              />
+            </div>
+          </a>
+        </face>
+      </basis>
+
+      <basis core="print" datamembername="db.faq">
+        <layout>
+          <section class="my-9 flex w-full justify-center">
+            <div
+              class="w-full common-qs px-5 lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col"
+            >
+              @child
+            </div>
+          </section>
+        </layout>
+        <face filter="TypeID<>150">
+          <div
+            class="box-container cursor-pointer gap-5 w-full border-b border-[#DADADA] flex flex-col py-6"
+          >
+            <div class="flex gap-2 items-center">
+              <span class="cross rotate-45 transition-all duration-300">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.70714 0.292922C1.31663 -0.0976182 0.683462 -0.0976439 0.292922 0.292865C-0.0976182 0.683373 -0.0976439 1.31654 0.292865 1.70708L5.58584 7.00049L0.293839 12.2929C-0.0966694 12.6835 -0.0966437 13.3166 0.293896 13.7071C0.684437 14.0976 1.3176 14.0976 1.70811 13.7071L7 8.41476L12.2919 13.7071C12.6824 14.0976 13.3156 14.0976 13.7061 13.7071C14.0966 13.3166 14.0967 12.6835 13.7062 12.2929L8.41416 7.00049L13.7071 1.70708C14.0976 1.31654 14.0976 0.683373 13.7071 0.292865C13.3165 -0.0976439 12.6834 -0.0976182 12.2929 0.292922L7 5.58622L1.70714 0.292922Z"
+                    fill="#496193"
+                    class="transition-all duration-300"
+                  />
+                </svg>
+              </span>
+              <p class="text-primary-900 font-bold text-base">@text</p>
+            </div>
+            <div id="answer" class="text-sm answer pb-5 pr-5 text-primary-700">
+              @largetext
+            </div>
+          </div>
+        </face>
+      </basis>
+
+      <section class="my-9 px-5 flex w-full justify-center">
+        <div
+          class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-4"
+        >
+          <p class="text-zinc-900 font-bold text-base">درباره ما</p>
+          <basis core="print" datamembername="db.info">
+            <face filter="TypeID=144">
+              <div class="text-sm text-zinc-700 line-clamp-5">@largetext</div>
+            </face>
+          </basis>
+        </div>
+      </section>
+
+      <section class="mb-9 mt-20 flex w-full justify-center">
+        <div
+          class="w-full lg:w-[950px] xl:w-[1200px] px-5 2xl:w-[1280px] grid grid-cols-1 gap-6"
+        >
+          <div class="w-full flex items-center gap-3">
+            <img
+              width="140"
+              height="165"
+              src="[##cms.cms.cdn##]/images/poshtibani.png"
+              alt="poshtibani"
+              class="w-[70px] h-[82px]"
+            />
+            <div class="flex flex-col gap-2">
+              <b>پشتیبانی تمام وقت</b>
+              <span class="text-sm text-zinc-700"
+                >پشتیبانی ۲۴ ساعته آژانس گردشگری ناوبران، همراه شما در تمامی
+                مراحل سفر، از انتخاب تور تا بازگشت به خانه.</span
+              >
+            </div>
+          </div>
+
+          <div class="w-full flex items-center gap-3">
+            <img
+              width="156"
+              height="164"
+              src="[##cms.cms.cdn##]/images/reserv-s.png"
+              alt="reserv"
+              class="w-[70px] h-[82px]"
+            />
+            <div class="flex flex-col gap-2">
+              <b>رزرو آسان بلیط</b>
+              <span class="text-sm text-zinc-700"
+                >رزرو آسان بلیط، تنها با چند کلیک و پشتیبانی همیشگی، سفری
+                بی‌دغدغه برای شما فراهم می‌کند.
+              </span>
+            </div>
+          </div>
+
+          <div class="w-full flex items-center gap-3">
+            <img
+              width="186"
+              height="163"
+              src="[##cms.cms.cdn##]/images/bazgasht-ani.png"
+              alt="return"
+              class="w-[93px] h-[81px]"
+            />
+            <div class="flex flex-col gap-2">
+              <b>بازگشت آنی وجه</b>
+              <span class="text-sm text-zinc-700"
+                >بازگشت آنی وجه، تعهد ما به ارائه خدمات مطمئن و بی‌دغدغه به
+                شماست.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
+    <basis core="call" file="footer.inc" />
+  </body>
+</html>

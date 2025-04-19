@@ -1,0 +1,118 @@
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="20"
+  name="PopularToursItems"
+>
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="[##cms.query.catid##]"
+    order="ord"
+  ></member>
+</basis>
+<basis
+  core="tree"
+  datamembername="PopularToursItems.cat"
+  idcol="catid"
+  parentidcol="parentid"
+  nullvalue="[##cms.query.catid##] "
+>
+  <layout> @child </layout>
+  <face filter="RowNumber<>1 and link is null">
+    <a
+      href="/tour-list.bc?catid=@catid"
+      class="swiper-slide set-hvr group cursor-pointer w-29333 flex flex-col gap-4"
+    >
+      <img
+        loading="lazy"
+        width="419"
+        height="230"
+        src="@image"
+        alt="@title"
+        class="w-full h-[230px] rounded-[33px]"
+      />
+      <h3 class="text-zinc-900 text-xl font-bold mt-3">@title</h3>
+      <p
+        class="flex text-sm my-2 group-hover:text-primary-600 text-zinc-400 gap-2 items-center"
+      >
+        <svg
+          width="25"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.30615 10.5269C5.30615 15.8822 11.6275 21 12.8321 21C14.0366 21 20.358 15.8822 20.358 10.5269C20.358 6.36941 16.9886 3 12.8321 3C8.67556 3 5.30615 6.36941 5.30615 10.5269Z"
+            stroke="#A1A1AA"
+            class="group-hover:stroke-primary-600"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15.3394 10.4654C15.3394 9.07984 14.2165 7.95703 12.831 7.95703C11.4445 7.95703 10.3218 9.07984 10.3218 10.4654C10.3218 11.8509 11.4445 12.9747 12.831 12.9747C14.2165 12.9747 15.3394 11.8509 15.3394 10.4654Z"
+            stroke="#A1A1AA"
+            class="group-hover:stroke-primary-600"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        @urldescription
+      </p>
+    </a>
+  </face>
+  <face filter="RowNumber<>1">
+    <a
+      href="@link"
+      class="swiper-slide set-hvr group cursor-pointer w-29333 flex flex-col gap-4"
+    >
+      <img
+        loading="lazy"
+        width="419"
+        height="230"
+        src="@image"
+        alt="@title"
+        class="w-full h-[230px] rounded-[33px]"
+      />
+      <h3 class="text-zinc-900 text-xl font-bold mt-3">@title</h3>
+      <p
+        class="flex text-sm my-2 group-hover:text-primary-600 text-zinc-400 gap-2 items-center"
+      >
+        <svg
+          width="25"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.30615 10.5269C5.30615 15.8822 11.6275 21 12.8321 21C14.0366 21 20.358 15.8822 20.358 10.5269C20.358 6.36941 16.9886 3 12.8321 3C8.67556 3 5.30615 6.36941 5.30615 10.5269Z"
+            stroke="#A1A1AA"
+            class="group-hover:stroke-primary-600"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15.3394 10.4654C15.3394 9.07984 14.2165 7.95703 12.831 7.95703C11.4445 7.95703 10.3218 9.07984 10.3218 10.4654C10.3218 11.8509 11.4445 12.9747 12.831 12.9747C14.2165 12.9747 15.3394 11.8509 15.3394 10.4654Z"
+            stroke="#A1A1AA"
+            class="group-hover:stroke-primary-600"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        @urldescription
+      </p>
+    </a>
+  </face>
+</basis>

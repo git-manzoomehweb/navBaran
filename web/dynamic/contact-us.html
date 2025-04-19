@@ -1,0 +1,360 @@
+<basis
+  core="dbsource"
+  name="db"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  usedforid="2375531"
+>
+  <member name="aboutUs" type="view" />
+</basis>
+
+<basis
+  core="dbsource"
+  name="db"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  usedforid="2376285"
+>
+  <member name="faq" type="view" />
+</basis>
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <title>
+      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری ناوبران)##]
+    </title>
+    <meta
+      name="description"
+      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری  ناوبران)##]"
+    />
+    <basis
+      core="dbsource"
+      source="hosting"
+      name="tag"
+      urlid="[##cms.seo.urlid##]"
+    >
+      <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+      <face filter="key = 'canonical'">
+        <link rel="canonical" href="@value" />
+      </face>
+      <face>
+        <meta property="@key" content="@value" />
+      </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+    <link
+      rel="stylesheet"
+      href="[##cms.cms.cdn##]/_css/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="relative">
+    <basis core="call" file="header.inc" />
+    <main>
+      <section class="w-full px-5 flex justify-center items-center h-[467px]">
+        <div
+          class="w-full h-full flex justify-center relative rounded-[45px] overflow-hidden"
+        >
+          <img
+            width="2808"
+            height="701"
+            src="[##cms.cms.cdn##]/images/blogs.jpg"
+            alt="blogs"
+            class="object-cover w-full h-full"
+          />
+          <span
+            class="absolute w-full h-full z-0 top-0 left-0 bg-[#06012FCC]"
+          ></span>
+          <div
+            class="absolute w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] h-full top-0 z-20 flex gap-4 justify-center items-center"
+          >
+            <div class="w-[50%]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.096503119878!2d51.4403862!3d35.7238451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e015fee7b93f9%3A0x3023a40a33830aae!2sNavbaran%20Travel%20Agency!5e0!3m2!1sen!2s!4v1744034791846!5m2!1sen!2s"
+                height="240"
+                title="navbaran"
+                class="inline w-full rounded-xl align-middle !border-0 border-none"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div
+              class="flex lg:!w-[48%] w-full h-[240px] justify-between flex-col gap-4"
+            >
+              <p class="text-white font-bold lg:!text-2xl text-base">
+                ارتباط با ما
+              </p>
+
+              <div class="flex items-center gap-4">
+                <svg
+                  width="29"
+                  height="30"
+                  viewBox="0 0 29 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.4987 13.6877C13.0729 13.6877 11.9129 12.5277 11.9129 11.1019C11.9129 9.67607 13.0729 8.51607 14.4987 8.51607C15.9245 8.51607 17.0845 9.67607 17.0845 11.1019C17.0845 12.5277 15.9245 13.6877 14.4987 13.6877ZM14.4987 3.69482C10.3783 3.69482 7.03125 7.04191 7.03125 11.1623C7.03125 16.2736 12.8675 21.3123 14.4987 21.3123C16.1179 21.3123 21.9541 16.2736 21.9541 11.1623C21.9541 7.04191 18.607 3.69482 14.4987 3.69482Z"
+                    fill="#1647A9"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22.7355 18.7022C22.2993 18.4557 21.7459 18.6128 21.5018 19.049C21.2565 19.4852 21.4112 20.0374 21.8486 20.2827C22.7851 20.8083 23.301 21.3956 23.301 21.9381C23.301 22.6667 22.3911 23.2866 21.8305 23.602C21.4619 23.8195 21.0499 24.0104 20.5678 24.1868C17.2376 25.4205 11.7796 25.4229 8.4373 24.1844C7.99143 24.0225 7.56005 23.8231 7.15284 23.5911C6.60909 23.2878 5.69922 22.6679 5.69922 21.9381C5.69922 21.2059 6.60909 20.5872 7.15284 20.2827C7.58905 20.0374 7.74372 19.4852 7.49964 19.049C7.25434 18.6128 6.70334 18.4581 6.26472 18.7022C4.29997 19.8042 3.88672 21.0693 3.88672 21.9381C3.88672 22.8045 4.29997 24.0696 6.26109 25.1704C6.75289 25.4495 7.2773 25.6912 7.81259 25.8857C9.67464 26.5757 12.0514 26.9563 14.5044 26.9563C16.9597 26.9563 19.3365 26.5757 21.1937 25.8869C21.7773 25.6755 22.2872 25.4374 22.7355 25.1716C24.7003 24.0684 25.1135 22.8045 25.1135 21.9381C25.1135 21.0705 24.7003 19.8054 22.7355 18.7022Z"
+                    fill="#1647A9"
+                  ></path>
+                </svg>
+                <basis core="print" datamembername="db.info">
+                  <face filter="TypeID=244">
+                    <div
+                      class="text-white lg:!w-fit w-[204px] lg:!text-base text-sm"
+                    >
+                      @largetext
+                    </div>
+                  </face>
+                </basis>
+              </div>
+              <div class="flex items-center gap-4">
+                <svg
+                  width="27"
+                  height="28"
+                  viewBox="0 0 27 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.0742 9.20498H11.9242C11.4584 9.20498 11.0805 8.82698 11.0805 8.36123C11.0805 7.89548 11.4584 7.51748 11.9242 7.51748H15.0742C15.5399 7.51748 15.9179 7.89548 15.9179 8.36123C15.9179 8.82698 15.5399 9.20498 15.0742 9.20498ZM13.4992 21.2425C12.8996 21.2425 12.4304 20.7734 12.4304 20.1737C12.4304 19.5617 12.9952 19.105 13.4992 19.105C14.0043 19.105 14.5679 19.5617 14.5679 20.1737C14.5679 20.7857 14.0043 21.2425 13.4992 21.2425ZM16.5929 3.63623H10.4055C7.86184 3.63623 5.79297 5.70511 5.79297 8.24761V20.3987C5.79297 22.9424 7.86184 25.0112 10.4055 25.0112H16.5929C19.1366 25.0112 21.2054 22.9424 21.2054 20.3987V8.24761C21.2054 5.70511 19.1366 3.63623 16.5929 3.63623Z"
+                    fill="#1647A9"
+                  ></path>
+                </svg>
+                <basis core="print" datamembername="db.info">
+                  <face filter="valueID=4125115">
+                    <a
+                      href="tel:@text"
+                      class="text-white lg:!text-base text-sm transition-all hover:text-primary-700"
+                      >@text</a
+                    >
+                  </face>
+                </basis>
+              </div>
+              <div class="flex items-center gap-4">
+                <svg
+                  width="27"
+                  height="28"
+                  viewBox="0 0 27 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.0742 9.20498H11.9242C11.4584 9.20498 11.0805 8.82698 11.0805 8.36123C11.0805 7.89548 11.4584 7.51748 11.9242 7.51748H15.0742C15.5399 7.51748 15.9179 7.89548 15.9179 8.36123C15.9179 8.82698 15.5399 9.20498 15.0742 9.20498ZM13.4992 21.2425C12.8996 21.2425 12.4304 20.7734 12.4304 20.1737C12.4304 19.5617 12.9952 19.105 13.4992 19.105C14.0043 19.105 14.5679 19.5617 14.5679 20.1737C14.5679 20.7857 14.0043 21.2425 13.4992 21.2425ZM16.5929 3.63623H10.4055C7.86184 3.63623 5.79297 5.70511 5.79297 8.24761V20.3987C5.79297 22.9424 7.86184 25.0112 10.4055 25.0112H16.5929C19.1366 25.0112 21.2054 22.9424 21.2054 20.3987V8.24761C21.2054 5.70511 19.1366 3.63623 16.5929 3.63623Z"
+                    fill="#1647A9"
+                  ></path>
+                </svg>
+                <basis core="print" datamembername="db.info">
+                  <face filter="valueID=4130235">
+                    <a
+                      href="tel:@text"
+                      class="text-white lg:!text-base text-sm transition-all hover:text-primary-700"
+                      >@text</a
+                    >
+                  </face>
+                </basis>
+              </div>
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.495 17.6874L15.144 12.9564L14.624 13.3814C13.892 13.9914 12.973 14.2964 12.052 14.2964C11.129 14.2964 10.206 13.9904 9.47 13.3764L8.893 12.9144L4.503 17.6824C4.243 17.1684 4.082 16.5884 4.034 15.9764L7.719 11.9744L4.032 9.02239C4.078 8.44239 4.222 7.90939 4.453 7.43739L10.419 12.2154C11.354 12.9944 12.747 12.9934 13.67 12.2244L19.54 7.42339C19.774 7.89639 19.92 8.43139 19.967 9.01239L16.307 12.0054L19.965 15.9834C19.916 16.5944 19.755 17.1744 19.495 17.6874ZM21.499 15.6074C21.499 15.6054 21.5 15.6034 21.5 15.6004V9.40039C21.5 9.40039 21.499 9.39739 21.499 9.39539C21.499 9.09239 21.467 8.80239 21.421 8.51839C21.394 8.32839 21.357 8.14539 21.313 7.96339C21.31 7.94839 21.308 7.93339 21.305 7.91839L21.301 7.92139C21.172 7.39439 20.983 6.89939 20.727 6.45339L20.734 6.44739C20.722 6.42839 20.708 6.41039 20.696 6.39139C20.648 6.30839 20.593 6.23139 20.54 6.15239C20.413 5.95939 20.275 5.77739 20.126 5.60539C20.081 5.55339 20.04 5.49839 19.993 5.44939C19.794 5.23739 19.577 5.04739 19.346 4.87439C19.296 4.83839 19.245 4.80539 19.195 4.77039C18.963 4.61039 18.721 4.46639 18.463 4.34839C18.443 4.33939 18.425 4.32839 18.406 4.31939C18.132 4.19839 17.843 4.10939 17.544 4.04039C17.477 4.02439 17.409 4.01139 17.341 3.99839C17.04 3.94139 16.731 3.90239 16.41 3.90139C16.406 3.90139 16.403 3.90039 16.4 3.90039H7.6C7.596 3.90039 7.594 3.90139 7.59 3.90139C7.252 3.90239 6.93 3.94339 6.616 4.00239C6.575 4.01039 6.535 4.01839 6.495 4.02739C5.079 4.33139 3.931 5.20839 3.236 6.46239L3.259 6.48039C3.006 6.92839 2.818 7.42139 2.69 7.94739L2.681 7.94039C2.672 7.98039 2.667 8.02339 2.658 8.06439C2.628 8.20139 2.602 8.34039 2.581 8.48239C2.534 8.77839 2.5 9.08139 2.5 9.39939V15.6004V15.6034C2.5 15.9394 2.536 16.2614 2.59 16.5754C2.627 16.8094 2.685 17.0314 2.747 17.2554C2.755 17.2864 2.76 17.3204 2.769 17.3504L2.773 17.3464C3.038 18.2554 3.479 19.0804 4.1 19.7004C4.662 20.2624 5.352 20.6464 6.123 20.8724C6.218 20.9014 6.311 20.9324 6.408 20.9554C6.527 20.9834 6.647 21.0064 6.77 21.0254C7.035 21.0684 7.306 21.0984 7.587 21.0994C7.591 21.0994 7.595 21.1004 7.6 21.1004H16.4C16.403 21.1004 16.407 21.0994 16.41 21.0994C16.724 21.0994 17.025 21.0634 17.319 21.0124C17.34 21.0084 17.362 21.0044 17.383 21.0004C18.336 20.8194 19.173 20.3854 19.838 19.7484C19.858 19.7304 19.88 19.7184 19.9 19.7004C19.936 19.6644 19.962 19.6164 19.997 19.5794C20.207 19.3574 20.404 19.1224 20.574 18.8614L20.573 18.8594C20.863 18.4084 21.067 17.8924 21.225 17.3524L21.237 17.3654C21.259 17.2874 21.27 17.2034 21.29 17.1244C21.333 16.9524 21.378 16.7844 21.406 16.6074C21.462 16.2854 21.499 15.9554 21.499 15.6074Z"
+                    fill="#1647A9"
+                  />
+                </svg>
+                <basis core="print" datamembername="db.info">
+                  <face filter="TypeID=242">
+                    <a
+                      href="mailto:@text"
+                      class="text-white transition-all lg:!text-base text-sm hover:text-primary-700"
+                      >@text</a
+                    >
+                  </face>
+                </basis>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full flex mb-8 mt-14 justify-center">
+        <div
+          class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-3"
+        >
+          <basis core="print" datamembername="db.aboutUs">
+            <face>
+              <div class="w-full flex flex-col gap-3">
+                <h1 class="font-bold text-2xl">@text</h1>
+                <div class="text-sm text-zinc-900">@largetext</div>
+              </div>
+            </face>
+          </basis>
+
+          <basis core="print" datamembername="db.faq">
+            <layout>
+              <section class="my-9 flex w-full justify-center">
+                <div class="w-full common-qs flex flex-col">@child</div>
+              </section>
+            </layout>
+            <face filter="TypeID<>150">
+              <div
+                class="box-container cursor-pointer gap-5 w-full border-b border-[#DADADA] flex flex-col py-6"
+              >
+                <div class="flex gap-2 items-center">
+                  <span class="cross rotate-45 transition-all duration-300">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.70714 0.292922C1.31663 -0.0976182 0.683462 -0.0976439 0.292922 0.292865C-0.0976182 0.683373 -0.0976439 1.31654 0.292865 1.70708L5.58584 7.00049L0.293839 12.2929C-0.0966694 12.6835 -0.0966437 13.3166 0.293896 13.7071C0.684437 14.0976 1.3176 14.0976 1.70811 13.7071L7 8.41476L12.2919 13.7071C12.6824 14.0976 13.3156 14.0976 13.7061 13.7071C14.0966 13.3166 14.0967 12.6835 13.7062 12.2929L8.41416 7.00049L13.7071 1.70708C14.0976 1.31654 14.0976 0.683373 13.7071 0.292865C13.3165 -0.0976439 12.6834 -0.0976182 12.2929 0.292922L7 5.58622L1.70714 0.292922Z"
+                        fill="#496193"
+                        class="transition-all duration-300"
+                      />
+                    </svg>
+                  </span>
+                  <p class="text-primary-900 font-bold text-xl">@text</p>
+                </div>
+                <div
+                  id="answer"
+                  class="text-sm answer pb-5 pr-5 text-primary-700"
+                >
+                  @largetext
+                </div>
+              </div>
+            </face>
+          </basis>
+
+          <div id="contact-form-resize" class="w-full flex flex-col gap-3">
+            <basis
+              core="schema"
+              run="atclient"
+              schemaurl="/schema/domainform/05EA542B-58D6-4197-B057-65971C49D42D/AC4E2811-8C30-4268-83EB-83980E8C5F43/fa/contact-us"
+              displaymode="new"
+              button="[data-btn-uploadfooter]"
+              resultsourceid="upload.datafooter"
+              OnRendered="RenderFormFooter"
+            ></basis>
+            <basis
+              core="api"
+              if="{##cms.uploadFooter.run|(false)##}"
+              run="atclient"
+              url="/schema/domainform/05EA542B-58D6-4197-B057-65971C49D42D/fa/editobject"
+              method="post"
+              body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+              content-type="application/x-www-form-urlencoded"
+              triggers="cms.uploadFooter"
+              OnProcessed="OnProcessedEditObjectFooter"
+            ></basis>
+            <basis
+              core="callback"
+              run="atclient"
+              method="uploadDocumentFooter"
+              triggers="upload.datafooter"
+            ></basis>
+            <div class="captcha-button">
+              <div
+                id="captchaContainer"
+                class="captchaContainerclass w-full captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+                data-bc-answer-container
+                data-bc-schema-info-multi="0"
+                data-bc-schema-info-word="58"
+                data-bc-schema-info-part="1"
+                data-bc-schema-info-part-0-type="text"
+              >
+                <basis
+                  core="dbsource"
+                  source="trust_login"
+                  name="captcha"
+                  run="atclient"
+                  triggers="captcha.refreshFooter"
+                >
+                  <member name="code" type="scalar" request="captcha"></member>
+                </basis>
+                <basis
+                  datamembername="captcha.code"
+                  core="print"
+                  run="atclient"
+                  OnRendered="captchaRenderedFooter"
+                >
+                  <face>
+                    <script type="text/template">
+                                    <div class="flex  justify-between "><div class="flex sfvgwdcsdhc  items-center">
+
+                         <div class="float-right"><input type="text" class="contactUsInput codeinputm bg-white rounded-2xl p-3" name="captcha" maxlength="4" placeholder="Security code"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                      <div class="float-right lg:mt-0 bvgvkek h-fit leading-[65px] px-4 flex items-center gap-2">
+                       <img loading="lazy" src="/@captcha@" width="120" height="60" alt="captcha" />
+                        <svg class="cursor-pointer inline-block align-middle" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#18181B"/></svg>
+                          </div>
+
+                                                        </div></div>
+                    </script>
+                  </face>
+                </basis>
+                <button
+                  class="data-body-btn transition-all duration-300 ease-in-out text-white w-full hover:bg-secondary rounded-lg bg-primary-900 py-3"
+                  type="button"
+                  data-btn-uploadfooter
+                >
+                  ارسال
+                </button>
+              </div>
+
+              <div
+                class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 rounded-2xl justify-center items-center gap-2.5 flex"
+              >
+                <div
+                  id="ballsWaveG"
+                  class="ext-zinc-50 text-base font-normal leading-normal"
+                >
+                  <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                </div>
+              </div>
+              <div class="message-api text-right"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <basis core="call" file="footer.inc" />
+  </body>
+</html>
