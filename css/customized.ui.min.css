@@ -676,25 +676,34 @@ video {
 }
 @font-face {
   font-display: swap;
+  font-family: "DanaRegularEn";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../_fonts/Dana-Regular.woff2") format("woff2"),
+    url("../_fonts/Dana-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
   font-family: DanaFaNum;
   font-style: normal;
   font-weight: 400;
-  src: url("../_fonts/DanaFaNum-Regular.woff") format("truetype");
+  src: url("../_fonts/DanaFaNum-Regular.woff") format("woff");
 }
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: DanaFaNum-Medium;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url("../_fonts/DanaFaNum-Medium.woff") format("truetype");
 }
 @font-face {
   font-display: swap;
   font-family: DanaFaNum-Bold;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   src: url("../_fonts/DanaFaNum-Bold.woff") format("truetype");
-}
+} */
 @font-face {
   font-display: swap;
   font-family: fontawesome;
@@ -721,6 +730,22 @@ video {
 *,
 body,
 html {
+  font-family: DanaFaNum, "DanaRegularEn";
+}
+.Login_Informati,
+button,
+a,
+input {
+  font-family: DanaFaNum !important;
+}
+.en-calendar,
+.en-calendar .basis_m_day {
+  font-family: "DanaRegularEn" !important;
+}
+#search-box input[type="text"],
+.calendar-apply-date,
+.date-info-destination,
+.date-info-departure {
   font-family: DanaFaNum !important;
 }
 :root {
@@ -989,7 +1014,16 @@ html {
   top: 102%;
   right: 0;
 }
-.search-box-container .flighttype-field.flighttype-dropDown::after,
+.flighttype-field-icon {
+  left: 3.8px !important;
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+}
+.Basis_Date_Box .border-type-1.px-2 p {
+  display: none !important;
+}
+/* .search-box-container .flighttype-field.flighttype-dropDown::after, */
 .search-box-container
   .reserve-field.flightclass-field
   > div.border-type-1.cursor-pointer.h-full.rounded-type-1.px-2::after {
@@ -999,6 +1033,7 @@ html {
   height: 24px;
   left: 1.8px;
   background-image: url("../images/Arrow-up.svg");
+  transform: rotate(0deg);
 }
 .search-box-container
   .flighttype-field.flighttype-dropDown
@@ -1239,7 +1274,7 @@ html {
   transform: translateY(9px);
 }
 .w-30875 {
-  width: 308.75px !important;
+  /* width: 308.75px !important; */
 }
 #hotel-list-container,
 #tour-list-container,
@@ -1286,6 +1321,17 @@ html {
   color: #fff !important;
 }
 @media not all and (min-width: 640px) {
+  #search-box #r-hotel .cursor-pointer.passenger-counts_container,
+  #search-box #r-tour .cursor-pointer.passenger-counts_container {
+    position: absolute !important;
+    bottom: 2px !important;
+    right: 45px !important;
+  }
+  #search-box #r-flighthotel .cursor-pointer.passenger-counts_container {
+    position: absolute !important;
+    bottom: 11px !important;
+    right: 45px !important;
+  }
   #search-box .add-routs:hover,
   .reserve-search button {
     background-color: var(--primary-900) !important;
@@ -1295,7 +1341,7 @@ html {
   }
   .Login_Informati {
     width: 3rem !important;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   #search-box
     .route-content
@@ -1628,6 +1674,28 @@ html {
     right: 60% !important;
   }
 }
+#search-box .confirm-passenger {
+  display: flex !important;
+  height: 45px !important;
+  width: 100% !important;
+  border-radius: 8px !important;
+  background-color: var(--primary) !important;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#search-box .confirm-passenger:hover {
+  background-color: var(--secondary) !important;
+}
+#search-box .confirm-passenger span {
+  color: #fff !important;
+}
+
+.search-box-container
+  .reserve-field.flightclass-field
+  > div.border-type-1.cursor-pointer.h-full.rounded-type-1.px-2.actived::after {
+  transform: rotate(180deg) !important;
+}
 @media (min-width: 1024px) {
   .box-container:hover {
     border-bottom: 1px solid var(--primary-800) !important;
@@ -1782,7 +1850,7 @@ html {
   }
   #search-box #r-hotel .Basis_Date_Box,
   #search-box #r-tour .Basis_Date_Box {
-    width: 53% !important;
+    width: 52% !important;
   }
   #search-box #r-hotel .Basis_Date_Box .reserve-field,
   #search-box #r-tour .Basis_Date_Box .reserve-field {
@@ -1865,7 +1933,7 @@ html {
   }
   #search-box #r-flight .Basis_Date_Box,
   #search-box #r-flighthotel .Basis_Date_Box {
-    width: 55% !important;
+    width: 53% !important;
   }
   #search-box
     #r-flight
@@ -1988,6 +2056,20 @@ html {
     align-items: center;
     justify-content: center;
   }
+  #search-box .r-hotel.hidden {
+    display: none !important;
+  }
+  #search-box .r-tour.hidden {
+    display: none !important;
+  }
+  #search-box #r-hotel,
+  #search-box #r-tour {
+    height: 202px !important;
+    display: flex;
+    /* justify-content: end; */
+    align-items: end !important;
+  }
+
   #search-box .exchangeRoute {
     left: unset;
     position: relative;
@@ -2072,7 +2154,7 @@ html {
   height: 160px;
 }
 .main-header.fixed {
-  z-index: 10000;
+  z-index: 50;
 }
 .swiper-button-disabled {
   cursor: not-allowed !important;
@@ -2124,5 +2206,58 @@ a.set-parent .current-discount {
   }
   100% {
     background-color: rgba(0, 0, 255, 0.154);
+  }
+}
+.h-178px {
+  height: 178px !important;
+}
+.\!h-\[380px\] {
+  height: 380px !important;
+}
+
+@media not all and (min-width: 1024px) {
+  #search-box form {
+    display: unset !important;
+  }
+  .search-box-container #r-flight .reserve-field.flightclass-field {
+    right: 150px !important;
+    height: fit-content !important;
+    width: fit-content !important;
+    top: 128px !important;
+  }
+  #search-box #r-flighthotel .flight-routes {
+    padding-top: 65px !important;
+  }
+  #search-box #r-flighthotel form {
+    padding-top: 0 !important;
+  }
+  .search-box-container.mobile-search-box .fixed-searchList ul:first-child {
+    border-bottom: none !important;
+  }
+  .search-box-container .searchList ul.float-right.w-1\/2 {
+    padding-left: none !important;
+  }
+  .searchList .ul-list {
+    flex-direction: column;
+  }
+  .search-box-container .searchList ul.border-l.border-\[\#DADADA\] {
+    border: none !important;
+  }
+#search-box .FlightClass.hidden-box {
+    padding-right: 1rem !important;
+    overflow: hidden;
+}
+.FlightClass ul{
+  margin-top: 2rem !important;
+}
+  .hidden-box,
+  .searchList,
+  .passengerbox {
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
   }
 }

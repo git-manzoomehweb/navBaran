@@ -1054,6 +1054,9 @@ video {
 .pt-12 {
   padding-top: 3rem;
 }
+.pt-df {
+  padding-top: 4rem;
+}
 .pt-32 {
   padding-top: 8rem;
 }
@@ -1241,14 +1244,14 @@ video {
   background-color: #fff;
 }
 .serach-bg {
-  background-image: url("../images/search-bg.png");
+  background-image: url("../images/search-bg.jpg");
   min-height: 552px;
 }
 .serach-bg > div.w-full.h-full.gap-9.justify-between.flex.items-end {
   min-height: 552px;
 }
 .serachmob-bg {
-  background-image: url("../images/search-bg-mob.png");
+  background-image: url("../images/search-bg-mob.jpg");
 }
 .main-header {
   z-index: 40;
@@ -1604,61 +1607,9 @@ video {
   background: var(--primary) !important;
   color: #fff !important;
 }
-@media only screen and (max-width: 1280px) {
-  .Basis_Calendar .current_month .section_next_month,
-  .Basis_Calendar .next_current_month .section_prev_month {
-    display: block !important;
-  }
-  .Basis_Calendar .current_month .month_detail {
-    border-radius: 4px 4px 0 0 !important;
-  }
-  .Basis_Calendar .current_month {
-    border-top-left-radius: 4px !important;
-    border-bottom-left-radius: 0 !important;
-    padding-left: 0 !important;
-  }
-  .Basis_Calendar .next_current_month {
-    z-index: 0 !important;
-    left: auto !important;
-    right: 0 !important;
-  }
-  .Basis_Calendar {
-    width: 91%;
-    margin: 0 auto;
-  }
-  .Basis_Calendar .month,
-  .Basis_Calendar .year,
-  .Basis_Calendar_Box {
-    left: 0;
-    margin: 0 auto;
-    width: 95% !important;
-  }
-  .Basis_Calendar_Box {
-    left: 0 !important;
-    right: 0 !important;
-    margin: 1.25em auto 0;
-  }
-  .Basis_Calendar .date_info_selected {
-    display: block !important;
-    width: 100% !important;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    color: #000 !important;
-  }
-  .Basis_Calendar_Box::before {
-    left: 3em !important;
-  }
-}
-.calendar-footer input {
-  padding: 8px !important;
-}
-.calendar-footer .calendar-apply-date {
-  height: 43.25px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
+ 
+ 
+ 
 .searchHistory-content {
   width: 100% !important;
   margin: 1em auto;
@@ -1666,3 +1617,4 @@ video {
 .searchHistory-content form {
   border-bottom: 2px solid var(--primary) !important;
 }
+
