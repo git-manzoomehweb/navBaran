@@ -1,118 +1,65 @@
-<header
-  class="w-full bg-white main-header transition-all ease-in-out duration-300 px-5 lg:!px-0 flex justify-center h-[65px] lg:!h-[92px] items-center"
->
+<header dir="rtl"
+  class="w-full bg-white main-header transition-all ease-in-out duration-300 px-5 lg:!px-0 flex justify-center h-[65px] lg:!h-[92px] items-center">
   <div
-    class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-row-reverse lg:!flex-row justify-between items-center"
-  >
+    class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-row-reverse lg:!flex-row justify-between items-center">
     <a aria-label="navbaran-logo" href="/" class="z-50 logo-anchor">
-      <img
-        loading="lazy"
-        width="152"
-        height="60"
-        src="[##cms.cms.cdn##]/images/logo.png"
-        alt="navbaran-logo"
-        class="w-[110px] h-[40px]"
-      />
+      <img loading="lazy" width="152" height="60" src="[##cms.cms.cdn##]/images/logo.png" alt="navbaran-logo"
+        class="w-[110px] h-[40px]" />
     </a>
 
-    <nav class="flex items-center lg:w-[357px] justify-between">
-      <a
-        href="/"
-        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal"
-        >خانه</a
-      >
-      <a
-        href="/Tours"
-        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal"
-        >تور ها</a
-      >
-      <a
-        href="/Tourism-Magazine"
-        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal"
-        >مجله گردشگری</a
-      >
-      <a
-        href="/contact-us"
-        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal"
-        >ارتباط با ما</a
-      >
+    <nav class="flex items-center gap-4">
+      <a href="/"
+        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal">خانه</a>
+      <a href="/Tours"
+        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal">تور ها</a>
+      <a href="/Tourism-Magazine"
+        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal">مجله
+        گردشگری</a>
+      <a href="/contact-us"
+        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal">ارتباط با
+        ما</a>
+      <a href="/online-payment"
+        class="text-zinc-900 hidden lg:!flex hover:text-primary-800 transition-all text-base font-normal">پرداخت
+        آنلاین</a>
     </nav>
     <div class="flex gap-3 items-center">
       <button class="flex lg:!hidden open-menu" type="button">
-        <svg
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
             d="M20 20.5H4C3.448 20.5 3 20.053 3 19.5C3 18.947 3.448 18.5 4 18.5H20C20.552 18.5 21 18.947 21 19.5C21 20.053 20.552 20.5 20 20.5Z"
-            fill="#1647A9"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fill="#1647A9" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
             d="M20 6.5H4C3.448 6.5 3 6.053 3 5.5C3 4.947 3.448 4.5 4 4.5H20C20.552 4.5 21 4.947 21 5.5C21 6.053 20.552 6.5 20 6.5Z"
-            fill="#1647A9"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fill="#1647A9" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
             d="M20 13.5H4C3.448 13.5 3 13.053 3 12.5C3 11.947 3.448 11.5 4 11.5H20C20.552 11.5 21 11.947 21 12.5C21 13.053 20.552 13.5 20 13.5Z"
-            fill="#1647A9"
-          />
+            fill="#1647A9" />
         </svg>
       </button>
       <div
-        class="Login_Informati justify-center items-center flex gap-1 whitespace-nowrap w-[163px] h-12 bg-primary-900 rounded-lg"
-      >
+        class="Login_Informati justify-center items-center flex gap-1 whitespace-nowrap w-[163px] h-12 bg-primary-900 rounded-lg">
         <basis core="call" file="authentication/modal"></basis>
       </div>
     </div>
   </div>
 </header>
 <nav
-  class="w-screen z-30 h-screen translate-x-[7000px] transition-all duration-300 ease-in-out fixed lg:!hidden flex flex-col items-center top-0 left-0 menu-mob"
->
+  class="w-screen z-30 h-screen translate-x-[7000px] transition-all duration-300 ease-in-out fixed lg:!hidden flex flex-col items-center top-0 left-0 menu-mob">
   <button type="button" class="nav-closer absolute top-8 right-7">
-    <svg
-      width="13"
-      height="13"
-      viewBox="0 0 13 13"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
         d="M7.81295 6.50009L12.7277 1.58528C13.0908 1.22221 13.0908 0.635366 12.7277 0.2723C12.3646 -0.0907666 11.7778 -0.0907666 11.4148 0.2723L6.5 5.18711L1.58525 0.2723C1.22219 -0.0907666 0.635353 -0.0907666 0.272294 0.2723C-0.0907647 0.635366 -0.0907647 1.22221 0.272294 1.58528L5.18704 6.50009L0.272294 11.415C-0.0907647 11.778 -0.0907647 12.3649 0.272294 12.7279C0.453359 12.909 0.691065 13 0.928771 13C1.16648 13 1.40418 12.909 1.58525 12.7279L6.5 7.81317L11.4148 12.7279C11.5958 12.909 11.8335 13 12.0712 13C12.3089 13 12.5466 12.909 12.7277 12.7279C13.0908 12.3649 13.0908 11.778 12.7277 11.415L7.81295 6.50009Z"
-        fill="#1647A9"
-      ></path>
+        fill="#1647A9"></path>
     </svg>
   </button>
   <div class="flex flex-col items-center justify-center gap-20 pt-32">
-    <a
-      href="/"
-      class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
-      >خانه</a
-    >
-    <a
-      href="/Tours"
-      class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
-      >تور ها</a
-    >
-    <a
-      href="/Tourism-Magazine"
-      class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
-      >مجله گردشگری</a
-    >
-    <a
-      href="/contact-us"
-      class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"
-      >ارتباط با ما</a
-    >
+    <a href="/" class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal">خانه</a>
+    <a href="/Tours" class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal">تور ها</a>
+    <a href="/Tourism-Magazine" class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal">مجله
+      گردشگری</a>
+    <a href="/contact-us" class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal">ارتباط با
+      ما</a>
+    <a href="/payment" class="text-zinc-900 hover:text-primary-800 transition-all text-base font-normal"> پرداخت
+      آنلاین</a>
   </div>
 </nav>

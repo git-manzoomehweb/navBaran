@@ -3,8 +3,8 @@ function checkAndUpdateClass() {
     const e = document.querySelector(".multicity-flight-form"),
       t = document.querySelector(".Basis_Calendar_Box.fa-calendar");
     e
-      ? t.classList.add("set-right-for-multicity")
-      : t.classList.remove("set-right-for-multicity");
+      ? t?.classList.add("set-right-for-multicity")
+      : t?.classList.remove("set-right-for-multicity");
   }, 100);
 }
 document.addEventListener("DOMContentLoaded", function () {
@@ -16,10 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
         (e.onreadystatechange = function () {
           if (4 == this.readyState && 200 == this.status) {
             var t = document.getElementById("search-box");
+
             (t.innerHTML = e.responseText), checkAndUpdateClass();
             document.querySelector(
               "#r-tour .searchList .flex.relative.mb-2.float-right.w-full.clear-both .reserve-location"
             ).readOnly = !0;
+
             document
               .querySelectorAll(".passenger-counts.adult-count")
               .forEach((e) => {
@@ -27,6 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             document.querySelectorAll(".flighttype-field").forEach((e) => {
               e.classList.add("flighttype-dropDown");
+            });
+            const flighttypeSerachBox = document.querySelectorAll(
+              ".reserve-field.flightclass-field div.border-type-1.cursor-pointer.rounded-type-1.px-2"
+            );
+            flighttypeSerachBox.forEach((item) => {
+              item.addEventListener("click", () => {
+                item.classList.toggle("actived");
+              });
             });
             const i = document.querySelectorAll(
               "#search-box  .departure-route input.text-value "
@@ -183,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
               const r = o.firstChild;
               e.insertBefore(r, e.firstChild);
             });
+
             for (
               var n = t.getElementsByTagName("script"), o = 0;
               o < n.length;
@@ -322,82 +333,56 @@ if (document.querySelectorAll(".swiper-mob").length > 0)
       1024: { slidesPerView: 1.2, spaceBetween: 15 },
     },
   });
-const questions = document.querySelectorAll(".common-qs  .box-container");
-function updateProductCount() {
-  const e = document.querySelector(".get-length");
-  if (!e) return;
-  const t = e.querySelectorAll("a").length,
-    n = document.querySelector(".number-of-ptoducts");
-  n && (n.textContent = t);
-}
-function updateProductCount() {
-  const e = document.querySelector(".get-length2");
-  if (!e) return;
-  const t = e.querySelectorAll(".fav-tours").length,
-    n = document.querySelector(".number-of-ptoducts");
-  n && (n.textContent = t);
-}
-questions.forEach((e) => {
-  e.addEventListener("click", () => {
-    e.classList.toggle("active");
-  });
-}),
-  document.addEventListener("click", (e) => {
-    questions.forEach((t) => {
-      t.contains(e.target) || t.classList.remove("active");
-    });
-  }),
-  document.addEventListener("DOMContentLoaded", updateProductCount),
-  document.addEventListener("DOMContentLoaded", updateProductCount),
-  document.addEventListener("DOMContentLoaded", function () {
-    let e = document.querySelector(".fetch-content-tour"),
-      t = document.querySelectorAll(".tour-li");
-    if (e) {
-      async function n(t = 214188) {
-        e.innerHTML =
-          '<div class="w-full flex justify-center p-5"><span class="loader"></span></div>';
-        try {
-          let n = await fetch(`/tour-load-items.bc?catid=${t}`);
-          if (!n.ok) throw Error(`HTTP error! Status: ${n.status}`);
-          let o = await n.text();
-          (e.innerHTML = o),
-            window.tourSwiper && window.tourSwiper.destroy(!0, !0),
-            (window.tourSwiper = new Swiper("#tour-list-container", {
-              slidesPerView: 4,
-              speed: 900,
-              centeredSlides: !1,
-              spaceBetween: 15,
-              grabCursor: !0,
-              autoplay: { delay: 9500, disableOnInteraction: !1 },
-              pagination: { el: ".swiper-pagination", clickable: !0 },
-              navigation: {
-                nextEl: ".swiper-button-next-f",
-                prevEl: ".swiper-button-prev-f",
-              },
-              breakpoints: {
-                640: { slidesPerView: 1.3, spaceBetween: 20 },
-                768: { slidesPerView: 3, spaceBetween: 40 },
-                1024: { slidesPerView: 4, spaceBetween: 15 },
-              },
-            }));
-        } catch (t) {
-          console.error("Fetch failed:", t),
-            (e.innerHTML = `<p>Error loading data: ${t.message}</p>`);
-        }
+
+document.addEventListener("DOMContentLoaded", function () {
+  let e = document.querySelector(".fetch-content-tour"),
+    t = document.querySelectorAll(".tour-li");
+  if (e) {
+    async function n(t = 214188) {
+      e.innerHTML =
+        '<div class="w-full flex justify-center p-5"><span class="loader"></span></div>';
+      try {
+        let n = await fetch(`/tour-load-items.bc?catid=${t}`);
+        if (!n.ok) throw Error(`HTTP error! Status: ${n.status}`);
+        let o = await n.text();
+        (e.innerHTML = o),
+          window.tourSwiper && window.tourSwiper.destroy(!0, !0),
+          (window.tourSwiper = new Swiper("#tour-list-container", {
+            slidesPerView: 4,
+            speed: 900,
+            centeredSlides: !1,
+            spaceBetween: 15,
+            grabCursor: !0,
+            autoplay: { delay: 9500, disableOnInteraction: !1 },
+            pagination: { el: ".swiper-pagination", clickable: !0 },
+            navigation: {
+              nextEl: ".swiper-button-next-f",
+              prevEl: ".swiper-button-prev-f",
+            },
+            breakpoints: {
+              640: { slidesPerView: 1.3, spaceBetween: 20 },
+              768: { slidesPerView: 4, spaceBetween: 15 },
+              1024: { slidesPerView: 4, spaceBetween: 15 },
+            },
+          }));
+      } catch (t) {
+        console.error("Fetch failed:", t),
+          (e.innerHTML = `<p>Error loading data: ${t.message}</p>`);
       }
-      n(),
-        t.forEach((e) => {
-          e.addEventListener("click", function () {
-            t.forEach((e) => {
-              (e.style.backgroundColor = ""), (e.style.color = "");
-            }),
-              (e.style.backgroundColor = "#1647A9"),
-              (e.style.color = "#fff"),
-              n(e.getAttribute("data-id"));
-          });
-        });
     }
-  }),
+    n(),
+      t.forEach((e) => {
+        e.addEventListener("click", function () {
+          t.forEach((e) => {
+            (e.style.backgroundColor = ""), (e.style.color = "");
+          }),
+            (e.style.backgroundColor = "#1647A9"),
+            (e.style.color = "#fff"),
+            n(e.getAttribute("data-id"));
+        });
+      });
+  }
+}),
   document.addEventListener("DOMContentLoaded", function () {
     let e = document.querySelector(".fetch-content-destination"),
       t = document.querySelectorAll(".destination-li");
@@ -428,7 +413,7 @@ questions.forEach((e) => {
                 },
                 breakpoints: {
                   640: { slidesPerView: 1.3, spaceBetween: 20 },
-                  768: { slidesPerView: 3, spaceBetween: 40 },
+                  768: { slidesPerView: 3, spaceBetween: 15 },
                   1024: { slidesPerView: 3, spaceBetween: 15 },
                 },
               }
@@ -480,7 +465,7 @@ questions.forEach((e) => {
                 },
                 breakpoints: {
                   640: { slidesPerView: 1.3, spaceBetween: 20 },
-                  768: { slidesPerView: 3, spaceBetween: 40 },
+                  768: { slidesPerView: 4, spaceBetween: 15 },
                   1024: { slidesPerView: 4, spaceBetween: 15 },
                 },
               }
@@ -530,7 +515,7 @@ questions.forEach((e) => {
               },
               breakpoints: {
                 640: { slidesPerView: 1.3, spaceBetween: 20 },
-                768: { slidesPerView: 3, spaceBetween: 40 },
+                768: { slidesPerView: 4, spaceBetween: 15 },
                 1024: { slidesPerView: 4, spaceBetween: 15 },
               },
             }));
@@ -569,9 +554,13 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".pure-date").forEach((e) => {
     const t = e.nextElementSibling;
     if (t && t.classList.contains("main-date")) {
-      const n = e.textContent.trim(),
-        [o, r, i] = n.split("/"),
-        c = [
+      const n = e.textContent.trim();
+
+      if (n === "") {
+        t.textContent = "";
+      } else {
+        const [o, r, i] = n.split("/");
+        const c = [
           "فروردین",
           "اردیبهشت",
           "خرداد",
@@ -585,59 +574,62 @@ document.addEventListener("DOMContentLoaded", function () {
           "بهمن",
           "اسفند",
         ][parseInt(r, 10) - 1];
-      t.textContent = `${parseInt(i, 10)} ${c} ${o}`;
+
+        t.textContent = `${parseInt(i, 10)} ${c} ${o}`;
+      }
     }
   });
-}),
-  document.addEventListener("DOMContentLoaded", function () {
-    let e = document.querySelector(".fetch-content-tourmob"),
-      t = document.querySelectorAll(".tourmob-li");
-    if (e) {
-      async function n(t = 214188) {
-        e.innerHTML =
-          '<div class="w-full flex justify-center p-5"><span class="loader"></span></div>';
-        try {
-          let n = await fetch(`tour-load-items.bc?catid=${t}`);
-          if (!n.ok) throw Error(`HTTP error! Status: ${n.status}`);
-          let o = await n.text();
-          (e.innerHTML = o),
-            window.tourmobSwiper && window.tourmobSwiper.destroy(!0, !0),
-            (window.tourmobSwiper = new Swiper("#tourmob-list-container", {
-              slidesPerView: 1.2,
-              speed: 900,
-              centeredSlides: !1,
-              spaceBetween: 15,
-              grabCursor: !0,
-              autoplay: { delay: 9500, disableOnInteraction: !1 },
-              pagination: { el: ".swiper-pagination", clickable: !0 },
-              navigation: {
-                nextEl: ".swiper-button-next-f",
-                prevEl: ".swiper-button-prev-f",
-              },
-              breakpoints: {
-                640: { slidesPerView: 1.3, spaceBetween: 20 },
-                768: { slidesPerView: 3, spaceBetween: 40 },
-                1024: { slidesPerView: 4, spaceBetween: 15 },
-              },
-            }));
-        } catch (t) {
-          console.error("Fetch failed:", t),
-            (e.innerHTML = `<p>Error loading data: ${t.message}</p>`);
-        }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let e = document.querySelector(".fetch-content-tourmob"),
+    t = document.querySelectorAll(".tourmob-li");
+  if (e) {
+    async function n(t = 214188) {
+      e.innerHTML =
+        '<div class="w-full flex justify-center p-5"><span class="loader"></span></div>';
+      try {
+        let n = await fetch(`tour-load-items.bc?catid=${t}`);
+        if (!n.ok) throw Error(`HTTP error! Status: ${n.status}`);
+        let o = await n.text();
+        (e.innerHTML = o),
+          window.tourmobSwiper && window.tourmobSwiper.destroy(!0, !0),
+          (window.tourmobSwiper = new Swiper("#tourmob-list-container", {
+            slidesPerView: 1.2,
+            speed: 900,
+            centeredSlides: !1,
+            spaceBetween: 15,
+            grabCursor: !0,
+            autoplay: { delay: 9500, disableOnInteraction: !1 },
+            pagination: { el: ".swiper-pagination", clickable: !0 },
+            navigation: {
+              nextEl: ".swiper-button-next-f",
+              prevEl: ".swiper-button-prev-f",
+            },
+            breakpoints: {
+              640: { slidesPerView: 1.3, spaceBetween: 20 },
+              768: { slidesPerView: 3, spaceBetween: 40 },
+              1024: { slidesPerView: 4, spaceBetween: 15 },
+            },
+          }));
+      } catch (t) {
+        console.error("Fetch failed:", t),
+          (e.innerHTML = `<p>Error loading data: ${t.message}</p>`);
       }
-      n(),
-        t.forEach((e) => {
-          e.addEventListener("click", function () {
-            t.forEach((e) => {
-              (e.style.backgroundColor = ""), (e.style.color = "");
-            }),
-              (e.style.backgroundColor = "#1647A9"),
-              (e.style.color = "#fff"),
-              n(e.getAttribute("data-id"));
-          });
-        });
     }
-  }),
+    n(),
+      t.forEach((e) => {
+        e.addEventListener("click", function () {
+          t.forEach((e) => {
+            (e.style.backgroundColor = ""), (e.style.color = "");
+          }),
+            (e.style.backgroundColor = "#1647A9"),
+            (e.style.color = "#fff"),
+            n(e.getAttribute("data-id"));
+        });
+      });
+  }
+}),
   document.addEventListener("DOMContentLoaded", function () {
     let e = document.querySelector(".fetch-content-destinationmob"),
       t = document.querySelectorAll(".destinationmob-li");
@@ -870,57 +862,55 @@ if (
         document.querySelector(".search-content ul").classList.remove("flex"),
         (isItemSelected = !0);
     }
-    (input.onkeyup = function () {
-      if (0 !== this.value.length) {
-        document.querySelector(".search-content ul").classList.remove("hidden"),
-          document.querySelector(".search-content ul").classList.add("flex");
-        var e = input.value.toUpperCase(),
-          t = document
-            .querySelector(".search-content")
-            .getElementsByTagName("li");
-        isItemSelected = !1;
-        for (var n = 0; n < t.length; n++) {
-          t[n].innerHTML.toUpperCase().indexOf(e) > 0
-            ? (t[n].style.display = "list-item")
-            : (t[n].style.display = "none");
+    input.onkeyup = function () {
+      const dropdown = document.querySelector(".search-content ul");
+      const items = document
+        .querySelector(".search-content")
+        .getElementsByTagName("li");
+
+      const filter = this.value.trim().toUpperCase();
+      isItemSelected = !1;
+
+      if (filter.length > 0) {
+        dropdown.classList.remove("hidden");
+        dropdown.classList.add("flex");
+
+        for (let i = 0; i < items.length; i++) {
+          items[i].innerHTML.toUpperCase().includes(filter)
+            ? (items[i].style.display = "list-item")
+            : (items[i].style.display = "none");
         }
       } else {
-        for (
-          t = document
-            .querySelector(".search-content")
-            .getElementsByTagName("li"),
-            n = 0;
-          n < t.length;
-          n++
-        )
-          t[n].style.display = "list-item";
-        document.querySelector(".search-content ul").classList.remove("hidden"),
-          document.querySelector(".search-content ul").classList.add("flex");
+        dropdown.classList.add("hidden");
+        dropdown.classList.remove("flex");
+
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display = "list-item";
+        }
       }
-    }),
-      document
-        .getElementById("search-content-article")
-        .addEventListener("submit", function (e) {
-          if (!isItemSelected) {
-            e.preventDefault(),
-              (document.getElementById("catidsearched").value = 0);
-            for (
-              var t = document
-                  .querySelector(".search-content")
-                  .getElementsByTagName("li"),
-                n = 0;
-              n < t.length;
-              n++
-            )
-              t[n].style.display = "list-item";
-            document
-              .querySelector(".search-content ul")
-              .classList.remove("hidden"),
-              document
-                .querySelector(".search-content ul")
-                .classList.add("flex");
-          }
-        });
+    };
+
+    document
+      .getElementById("search-content-article")
+      .addEventListener("submit", function (e) {
+        if (!isItemSelected) {
+          e.preventDefault(),
+            (document.getElementById("catidsearched").value = 0);
+          for (
+            var t = document
+                .querySelector(".search-content")
+                .getElementsByTagName("li"),
+              n = 0;
+            n < t.length;
+            n++
+          )
+            t[n].style.display = "list-item";
+          document
+            .querySelector(".search-content ul")
+            .classList.remove("hidden"),
+            document.querySelector(".search-content ul").classList.add("flex");
+        }
+      });
     document.querySelectorAll(".search-drop-down li").forEach((e) => {
       const t = e.querySelector("span").innerText;
       e.addEventListener("click", () => {
@@ -955,6 +945,36 @@ function captchaRenderedFooter() {
     "کد امنیتی";
 }
 async function OnProcessedEditObjectFooter(e) {
+  const nameInput = document
+    .querySelector("#contact-form-resize .name-ans input")
+    .value.trim();
+  const emailInput = document
+    .querySelector("#contact-form-resize .email-ans input")
+    .value.trim();
+
+  const currentTime = new Date().getTime();
+  const currentData = JSON.stringify({
+    name: nameInput,
+    email: emailInput,
+  });
+
+  if (
+    lastSubmission.data === currentData &&
+    currentTime - lastSubmission.timestamp < 60000
+  ) {
+    document.querySelector("#contact-form-resize .Loading_Form").style.display =
+      "none";
+    document.querySelector("#contact-form-resize .message-api").innerHTML =
+      "شما همین اطلاعات را کمتر از یک دقیقه پیش ارسال کرده‌اید.";
+    document
+      .querySelector("#contact-form-resize .message-api")
+      .classList.add("text-red-600");
+    return;
+  }
+
+  lastSubmission.data = currentData;
+  lastSubmission.timestamp = currentTime;
+
   "6" == (await e.response.json()).errorid
     ? ((document.querySelector(
         "#contact-form-resize .Loading_Form"
@@ -995,3 +1015,66 @@ document.addEventListener("click", (e) => {
       };
     window.addEventListener("scroll", t), t();
   });
+const qstion = document.querySelectorAll(".common-qs .box-container");
+qstion.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+qstion.forEach((item) => {
+  document.addEventListener("click", (e) => {
+    if (!item.contains(e.target)) {
+      item.classList.remove("active");
+    }
+  });
+});
+let lastSubmission = {
+  data: null,
+  timestamp: 0,
+};
+
+// function handleFormSubmission() {
+//   const nameInput = document
+//     .querySelector("#contact-form-resize .name-ans input")
+//     .value.trim();
+//   const emailInput = document
+//     .querySelector("#contact-form-resize .email-ans input")
+//     .value.trim();
+
+//   const currentTime = new Date().getTime();
+
+//   const currentData = JSON.stringify({
+//     name: nameInput,
+//     email: emailInput,
+//   });
+
+//   if (
+//     lastSubmission.data === currentData &&
+//     currentTime - lastSubmission.timestamp < 60000
+//   ) {
+//     showMessage(
+//       "شما همین اطلاعات را کمتر از یک دقیقه قبل ارسال کرده‌اید.",
+//       "error"
+//     );
+//     document;
+
+//     return;
+//   }
+
+//   lastSubmission.data = currentData;
+//   lastSubmission.timestamp = currentTime;
+// }
+
+// function showMessage(msg, type) {
+//   const messageContainer = document.querySelector(
+//     "#contact-form-resize .message-api"
+//   );
+//   messageContainer.textContent = msg;
+//   messageContainer.className = "message-api text-right";
+
+//   if (type === "error") messageContainer.classList.add("text-red-600");
+// }
+
+// document
+//   .querySelector("#contact-form-resize .data-body-btn ")
+//   .addEventListener("click", handleFormSubmission);

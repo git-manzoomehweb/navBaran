@@ -1,4 +1,4 @@
-@import url(customized.ui.min.css);
+@import url("./customized.ui.min.css");
 body,
 main {
   width: 100%;
@@ -52,10 +52,6 @@ li#Tour {
 .signs li,
 .social-icons li {
   display: inline-block;
-}
-.close-research,
-body {
-  display: flex !important;
 }
 @font-face {
   font-family: fontawesome;
@@ -161,23 +157,14 @@ i[class^="flaticon-"]:before {
 #temp1-pdf-package .tour-if::before,
 .Basis_Calendar .basis_s_day,
 .Basis_Calendar .day_of_date,
-.Basis_Calendar .month_change i:hover,
 .Basis_Calendar .month_of_date,
-.active-item-search,
 .angle-content .three,
-.close-research,
 .col-article .cdate::before,
 .col-article .view-ar:hover,
 .color_1,
 .color_2,
-.color_3,
-.confirm:hover,
 .consult-rsv form input.consult-submit:hover,
 .cotact-each-icon i,
-.details-item-title,
-.flight-summary-info .dash i,
-.flight_type .active,
-.flight_type li:hover,
 .font-color_1,
 .font-color_2,
 .header .nav-bar > .menu-item > .sub-menu li > a:hover,
@@ -187,13 +174,8 @@ i[class^="flaticon-"]:before {
 .item-aside-art #tabs li i,
 .list-footer a:hover,
 .login-title i,
-.name-tour,
-.nav-details li.active,
-.nav-details li:hover,
 .owl-next span,
 .owl-prev span,
-.passenger-title,
-.prev-passengers,
 .rangevalFirst,
 .rangevalFirst_2,
 .rangevalFirst_2 span,
@@ -205,22 +187,12 @@ i[class^="flaticon-"]:before {
 .section-input_list input[type="radio"]:checked + label span.checkbox::after,
 .section-menu .nav-bar > .menu-item:not(:first-child) a:hover,
 .selectCountry i,
-.social-art-footer ul li a:hover,
-.sort-box .sort-items li.active,
-.sort-items li.active,
-.sort-items li:hover,
-.tour-completion-info i,
-.ui-datepicker .ui-datepicker-next span,
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker th {
+.tour-completion-info i {
   color: var(--primary-900);
 }
 .color_font {
   color: #5c5c5c;
 }
-#temp1-pdf-package .circle-1,
-#temp1-pdf-package .circle-2,
-#temp1-pdf-package .circle-3,
 #temp1-pdf-package .circle-5,
 #temp1-pdf-package .info-title,
 .Basis_Calendar .selected_day,
@@ -229,8 +201,6 @@ i[class^="flaticon-"]:before {
 .bg_color_1,
 .effect-apollo figure,
 .fa-exchange-alt,
-.subtitle-content::after,
-.subtitle-content::before,
 .tour-info-tlt {
   background: var(--primary-900);
 }
@@ -276,6 +246,7 @@ html {
   font-family: DanaFaNum !important;
 }
 body {
+  display: flex !important;
   flex-direction: column;
   align-items: center !important;
 }
@@ -293,11 +264,11 @@ section.content {
   --primary-50: #e3f2fe;
   --primary-100: #bbdcfb;
   --primary-200: #90c6fc;
-  --primary-300: #63b6fd;
+  --primary-300: #63b6dd;
   --primary-400: #1a96d1;
   --primary-500: #2091fc;
   --primary-600: #2080ee;
-  --primary-700: #1d77da;
+  --primary: #1d77d4;
   --primary-800: #186cc4;
   --primary-900: #1647a9;
   --primary-950: #0a3386;
@@ -356,6 +327,30 @@ section.content {
   --red-800: #991b1b;
   --red-900: #7f1d1d;
   --red-950: #450a0a;
+}
+.Basis_Calendar .month_change i:hover,
+.active-item-search,
+.close-research,
+.color_3,
+.confirm:hover,
+.details-item-title,
+.flight-summary-info .dash i,
+.flight_type .active,
+.flight_type li:hover,
+.login-title i,
+.name-tour,
+.nav-details li.active,
+.nav-details li:hover,
+.passenger-title,
+.prev-passengers,
+.social-art-footer ul li a:hover,
+.sort-box .sort-items li.active,
+.sort-items li.active,
+.sort-items li:hover,
+.ui-datepicker .ui-datepicker-next span,
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker th {
+  color: var(--primary-900);
 }
 .UserInfo:before,
 .btnstyle::before,
@@ -765,28 +760,31 @@ section.content {
 #temp1-pdf-package .part31,
 .Basis_Calendar .month_day_list table td:hover,
 .Basis_Calendar .selected_date,
-.Basis_Calendar .selected_day,
 .background-color_1,
 .background-color_2,
-.background-color_3,
 .bottom-content .action-loading,
 .duration-details::after,
 .duration-details::before,
-.login-btn:hover,
-.next-btn,
 .next-btn:hover,
 .searched-item button:hover,
 .second-part-header .col1-second-part-header a span,
 .second-part-header .col1-second-part-header a::after,
 .second-part-header .col1-second-part-header a::before,
-.select-passnger,
 .tlt-table,
 .tour-info-tlt,
+fieldset hr {
+  background-color: var(--primary-900);
+}
+.Basis_Calendar .selected_day,
+.background-color_3,
+.bottom-content .action-loading,
+.login-btn:hover,
+.next-btn,
+.select-passnger,
 .ui-datepicker .ui-datepicker-buttonpane button,
 .ui-datepicker table thead th,
 .ui-datepicker-buttonpane .ui-datepicker-current:focus,
-.ui-datepicker-today .ui-state-highlight,
-fieldset hr {
+.ui-datepicker-today .ui-state-highlight {
   background-color: var(--primary-900);
 }
 .info-tel {
@@ -816,30 +814,31 @@ fieldset hr {
   margin: 0 8px;
   border: 1px solid #6a6a6a;
 }
-#back-to-top:hover,
-.section-input_list span.checkbox::before {
-  border: 2px solid var(--primary-900);
-}
 .Basis_Calendar .date_info_selected,
-.Basis_Calendar .month_detail,
-.prev-passengers {
+.Basis_Calendar .month_detail {
   border-bottom: 2px solid var(--primary-900);
 }
 .title-content {
   background-color: #9aa8be4d;
 }
+.section-input_list span.checkbox::before {
+  border: 2px solid var(--primary-900);
+}
 .section-input_list
   input[type="checkbox"]:checked
   + label
   span.checkbox::after {
-  color: #fff;
+  color: var(--primary-900);
   margin-top: 2px;
   margin-right: 1px;
 }
-.active-tab,
+.active-tab {
+  background: var(--primary-900) !important;
+  color: white !important;
+}
 .tab-details .active-tab {
   background: var(--primary-900) !important;
-  color: #fff !important;
+  color: white !important;
 }
 #back-to-top {
   bottom: 100px !important;
@@ -847,17 +846,7 @@ fieldset hr {
 #back-to-top:hover {
   background: #fff !important;
   color: var(--primary-900);
-}
-#Login_box .shine-hover,
-.close-research,
-.confirm,
-.cost-tour,
-.details-btn,
-.exchange-icon,
-.login-link,
-.owl-next,
-.owl-prev {
-  border: 1px solid var(--primary-900);
+  border: 2px solid var(--primary-900);
 }
 .active-item-search svg {
   fill: var(--primary-900) !important;
@@ -867,19 +856,25 @@ fieldset hr {
   color: var(--primary-900);
   font-weight: 700;
 }
-#Login_box .shine-hover,
-.brief-container .head-items .title,
-.buyer-type ul li.active,
-.buyer-type ul li:hover,
-.details-btn:hover,
-.item-tour:hover,
+#temp1-pdf-package .circle-1,
+#temp1-pdf-package .circle-2,
+#temp1-pdf-package .circle-3,
+.subtitle-content::after,
+.subtitle-content::before {
+  background: var(--primary-900);
+}
 .tour-container .figure:hover .cost-tour {
   color: #fff;
   background-color: var(--primary-900);
 }
+.cost-tour,
+.exchange-icon,
+.login-link,
+.owl-next,
+.owl-prev {
+  border: 1px solid var(--primary-900);
+}
 .first-row svg,
-.passengers-prev-title svg,
-.prev-passengers svg,
 .prev-passengers:hover svg,
 .third-row svg {
   fill: var(--primary-900);
@@ -906,24 +901,30 @@ fieldset hr {
 .btn_1:hover {
   background-color: #000;
 }
-#Login_box .shine-hover,
-#Login_box .shine-hover:hover,
-.btn-item button,
-.flight-duration-stop::before,
-.flight-duration-stop:before,
-.login-btn {
-  background-color: var(--primary-900);
-  background-color: var(--primary-900);
-}
 .login_module_prev:hover {
   color: #000;
   border-color: #000;
 }
-.btn-item button:hover,
-.close-content .fa-times::before,
-.item-aside-art #tabs li i,
-.login_info i,
-.prev-passengers:hover {
+#Login_box .shine-hover,
+.brief-container .head-items .title,
+.buyer-type ul li.active,
+.buyer-type ul li:hover,
+.details-btn:hover,
+.item-tour:hover {
+  color: #fff;
+  background-color: var(--primary-900);
+}
+#Login_box .shine-hover {
+  border: 1px solid var(--primary-900);
+  background-color: var(--primary-900);
+  border: 1px solid var(--primary-900);
+}
+#Login_box .shine-hover:hover,
+.login-btn {
+  background-color: var(--primary-900);
+  background-color: var(--primary-900);
+}
+.login_info i {
   color: var(--primary-900) !important;
 }
 .radioButton:checked + label span::after {
@@ -939,10 +940,17 @@ fieldset hr {
 .btn-item button,
 .flight-duration-stop::before,
 .flight-duration-stop:before {
+  background-color: var(--primary-900);
+  border: 1px solid var(--primary-900);
+}
+.close-research,
+.confirm,
+.details-btn {
   border: 1px solid var(--primary-900);
 }
 .close-research {
   justify-content: center;
+  display: flex !important;
   align-items: center;
 }
 .details-row-middle_1 {
@@ -978,13 +986,17 @@ fieldset hr {
 }
 .btn-item button:hover {
   background-color: #fff !important;
+  color: var(--primary-900) !important;
 }
-.exchange-icon:hover,
-.login-link:hover {
+.exchange-icon:hover {
   background-color: var(--primary-900);
-  color: #fff !important;
+  color: white !important;
 }
-.flight-summary-info .btn,
+.close-content .fa-times::before,
+.login_info i,
+.prev-passengers:hover {
+  color: var(--primary-900) !important;
+}
 .progress-bar {
   background-color: var(--primary-900) !important;
 }
@@ -1007,7 +1019,6 @@ fieldset hr {
 .side-tour i {
   color: #faa944;
 }
-.inside-title,
 .row-other-inf {
   border-right: 3px solid var(--primary-900);
 }
@@ -1015,6 +1026,13 @@ fieldset hr {
   margin-top: 25px;
   width: 80%;
   margin-right: 12%;
+}
+.prev-passengers {
+  border-bottom: 2px solid var(--primary-900);
+}
+.passengers-prev-title svg,
+.prev-passengers svg {
+  fill: var(--primary-900);
 }
 .nav-details li::before {
   border-top: 3px solid var(--primary-900);
@@ -1024,8 +1042,15 @@ fieldset hr {
   border: 1px solid var(--primary-900);
   color: var(--primary-900);
 }
+.inside-title {
+  border-right: 3px solid var(--primary-900);
+}
 .duration-details {
   border-bottom: 2px dashed var(--primary-900);
+}
+.login-link:hover {
+  background-color: var(--primary-900);
+  color: #fff !important;
 }
 .Login_Information {
   font-size: 14px;
@@ -1499,12 +1524,18 @@ header {
 .fa-instagram::before {
   content: "\f16d";
 }
+.item-aside-art #tabs li i {
+  color: var(--primary-900) !important;
+}
 .sub-tlt-art::before {
   background: var(--primary-900) !important;
 }
 .fa-user-circle::before {
   content: "\f2bd";
   color: var(--primary-900) !important;
+}
+.flight-summary-info .btn {
+  background-color: var(--primary-900) !important;
 }
 .flight-summary-info .btn:hover {
   background-color: var(--secondary) !important;
@@ -1522,7 +1553,7 @@ header {
 }
 @font-face {
   font-display: swap;
-  font-family: fontawesome;
+  font-family: "fontawesome";
   font-style: normal;
   font-weight: 900;
   font-display: block;
@@ -1540,3 +1571,4 @@ header {
   width: 100% !important;
   border-radius: 10px !important;
 }
+

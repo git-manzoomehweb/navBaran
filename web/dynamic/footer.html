@@ -1,57 +1,30 @@
-<basis
-  core="dbsource"
-  source="basiscore"
-  name="db"
-  mid="5"
-  lid="1"
-  usedforid="[##cms.cms.ownerid##]"
->
+<basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
   <member name="info" type="view"></member>
 </basis>
 
 <footer class="p-5 w-full">
-  <div
-    class="w-full lg:!px-0 px-5 py-[30px] flex justify-center bg-[#F0F2F5] lg:!rounded-[45px] rounded-[25px]"
-  >
-    <div
-      class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-3"
-    >
-      <img
-        loading="lazy"
-        width="152"
-        height="60"
-        src="[##cms.cms.cdn##]/images/logo.png"
-        aria-label="navbaran-logo"
-        alt="navbaran-logo"
-        class="w-[123px] h-[48px]"
-      />
+  <div dir="rtl"
+    class="w-full lg:!px-0 px-5 py-[30px] flex justify-center bg-[#F0F2F5] lg:!rounded-[45px] rounded-[25px]">
+    <div class="w-full lg:w-[950px] xl:w-[1200px] 2xl:w-[1280px] flex flex-col gap-3">
+      <a href="/">
+        <img loading="lazy" width="152" height="60" src="[##cms.cms.cdn##]/images/logo.png" aria-label="navbaran-logo"
+          alt="navbaran-logo" class="w-[123px] h-[48px]" />
+      </a>
       <div
-        class="flex items-center lg:!justify-start justify-center gap-8 pt-4 pb-6 border-b-[1.5px] border-zinc-300 w-full"
-      >
-        <a
-          href="/"
-          class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
-          >خانه</a
-        >
-        <a
-          href="/Tours"
-          class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
-          >تور ها</a
-        >
-        <a
-          href="/Tourism-Magazine"
-          class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
-          >مجله گردشگری</a
-        >
-        <a
-          href="/contact-us"
-          class="text-primary-900 lg:!text-base text-sm hover:text-secondary transition-all"
-          >ارتباط با ما</a
-        >
+        class="flex items-center lg:!justify-start justify-between gap-8 pt-4 pb-6 border-b-[1.5px] border-zinc-300 w-full">
+        <a href="/"
+          class="text-primary-900 whitespace-nowrap lg:!text-base text-sm hover:text-secondary transition-all">خانه</a>
+        <a href="/Tours"
+          class="text-primary-900 whitespace-nowrap lg:!text-base text-sm hover:text-secondary transition-all">تور
+          ها</a>
+        <a href="/Tourism-Magazine"
+          class="text-primary-900 whitespace-nowrap lg:!text-base text-sm hover:text-secondary transition-all">مجله
+          گردشگری</a>
+        <a href="/contact-us"
+          class="text-primary-900 whitespace-nowrap lg:!text-base text-sm hover:text-secondary transition-all">ارتباط با
+          ما</a>
       </div>
-      <div
-        class="w-full flex lg:!mt-4 lg:!flex-row flex-col-reverse gap-4 lg:!gap-7"
-      >
+      <div class="w-full flex lg:!mt-4 lg:!flex-row flex-col-reverse gap-4 lg:!gap-7">
         <div class="flex lg:!w-[48%] w-full flex-col gap-4">
           <p class="text-primary-950 font-bold lg:!text-2xl text-base">
             درباره ما
@@ -68,157 +41,82 @@
           </p>
 
           <div class="flex items-center gap-4">
-            <svg
-              width="29"
-              height="30"
-              viewBox="0 0 29 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+            <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M14.4987 13.6877C13.0729 13.6877 11.9129 12.5277 11.9129 11.1019C11.9129 9.67607 13.0729 8.51607 14.4987 8.51607C15.9245 8.51607 17.0845 9.67607 17.0845 11.1019C17.0845 12.5277 15.9245 13.6877 14.4987 13.6877ZM14.4987 3.69482C10.3783 3.69482 7.03125 7.04191 7.03125 11.1623C7.03125 16.2736 12.8675 21.3123 14.4987 21.3123C16.1179 21.3123 21.9541 16.2736 21.9541 11.1623C21.9541 7.04191 18.607 3.69482 14.4987 3.69482Z"
-                fill="#1647A9"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fill="#1647A9" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M22.7355 18.7022C22.2993 18.4557 21.7459 18.6128 21.5018 19.049C21.2565 19.4852 21.4112 20.0374 21.8486 20.2827C22.7851 20.8083 23.301 21.3956 23.301 21.9381C23.301 22.6667 22.3911 23.2866 21.8305 23.602C21.4619 23.8195 21.0499 24.0104 20.5678 24.1868C17.2376 25.4205 11.7796 25.4229 8.4373 24.1844C7.99143 24.0225 7.56005 23.8231 7.15284 23.5911C6.60909 23.2878 5.69922 22.6679 5.69922 21.9381C5.69922 21.2059 6.60909 20.5872 7.15284 20.2827C7.58905 20.0374 7.74372 19.4852 7.49964 19.049C7.25434 18.6128 6.70334 18.4581 6.26472 18.7022C4.29997 19.8042 3.88672 21.0693 3.88672 21.9381C3.88672 22.8045 4.29997 24.0696 6.26109 25.1704C6.75289 25.4495 7.2773 25.6912 7.81259 25.8857C9.67464 26.5757 12.0514 26.9563 14.5044 26.9563C16.9597 26.9563 19.3365 26.5757 21.1937 25.8869C21.7773 25.6755 22.2872 25.4374 22.7355 25.1716C24.7003 24.0684 25.1135 22.8045 25.1135 21.9381C25.1135 21.0705 24.7003 19.8054 22.7355 18.7022Z"
-                fill="#1647A9"
-              />
+                fill="#1647A9" />
             </svg>
             <basis core="print" datamembername="db.info">
               <face filter="TypeID=244">
-                <div
-                  class="text-zinc-600 lg:!w-fit w-[204px] lg:!text-base text-sm"
-                >
+                <div class="text-zinc-600 lg:!w-fit w-[204px] lg:!text-base text-sm">
                   @largetext
                 </div>
               </face>
             </basis>
           </div>
           <div class="flex items-center gap-4">
-            <svg
-              width="27"
-              height="28"
-              viewBox="0 0 27 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M15.0742 9.20498H11.9242C11.4584 9.20498 11.0805 8.82698 11.0805 8.36123C11.0805 7.89548 11.4584 7.51748 11.9242 7.51748H15.0742C15.5399 7.51748 15.9179 7.89548 15.9179 8.36123C15.9179 8.82698 15.5399 9.20498 15.0742 9.20498ZM13.4992 21.2425C12.8996 21.2425 12.4304 20.7734 12.4304 20.1737C12.4304 19.5617 12.9952 19.105 13.4992 19.105C14.0043 19.105 14.5679 19.5617 14.5679 20.1737C14.5679 20.7857 14.0043 21.2425 13.4992 21.2425ZM16.5929 3.63623H10.4055C7.86184 3.63623 5.79297 5.70511 5.79297 8.24761V20.3987C5.79297 22.9424 7.86184 25.0112 10.4055 25.0112H16.5929C19.1366 25.0112 21.2054 22.9424 21.2054 20.3987V8.24761C21.2054 5.70511 19.1366 3.63623 16.5929 3.63623Z"
-                fill="#1647A9"
-              />
+                fill="#1647A9" />
             </svg>
             <basis core="print" datamembername="db.info">
               <face filter="valueID=4125115">
-                <a
-                  href="tel:@text"
-                  class="text-zinc-600 lg:!text-base text-sm transition-all hover:text-primary-700"
-                  >@text</a
-                >
+                <a href="tel:@text"
+                  class="text-zinc-600 lg:!text-base text-sm transition-all hover:text-primary-700">@text</a>
               </face>
             </basis>
           </div>
           <div class="flex items-center gap-4">
-            <svg
-              width="27"
-              height="28"
-              viewBox="0 0 27 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M15.0742 9.20498H11.9242C11.4584 9.20498 11.0805 8.82698 11.0805 8.36123C11.0805 7.89548 11.4584 7.51748 11.9242 7.51748H15.0742C15.5399 7.51748 15.9179 7.89548 15.9179 8.36123C15.9179 8.82698 15.5399 9.20498 15.0742 9.20498ZM13.4992 21.2425C12.8996 21.2425 12.4304 20.7734 12.4304 20.1737C12.4304 19.5617 12.9952 19.105 13.4992 19.105C14.0043 19.105 14.5679 19.5617 14.5679 20.1737C14.5679 20.7857 14.0043 21.2425 13.4992 21.2425ZM16.5929 3.63623H10.4055C7.86184 3.63623 5.79297 5.70511 5.79297 8.24761V20.3987C5.79297 22.9424 7.86184 25.0112 10.4055 25.0112H16.5929C19.1366 25.0112 21.2054 22.9424 21.2054 20.3987V8.24761C21.2054 5.70511 19.1366 3.63623 16.5929 3.63623Z"
-                fill="#1647A9"
-              />
+                fill="#1647A9" />
             </svg>
             <basis core="print" datamembername="db.info">
               <face filter="TypeID=242">
-                <a
-                  href="mailto:@text"
-                  class="text-zinc-600 transition-all lg:!text-base text-sm hover:text-primary-700"
-                  >@text</a
-                >
+                <a href="mailto:@text"
+                  class="text-zinc-600 transition-all lg:!text-base text-sm hover:text-primary-700">@text</a>
               </face>
             </basis>
           </div>
         </div>
       </div>
       <div class="flex w-full gap-4 lg:!gap-7 lg:!flex-row flex-col-reverse">
-        <div
-          class="flex flex-wrap lg:!gap-x-3 gap-x-12 lg:!flex-nowrap items-center gap-4 w-full lg:!w-[50%]"
-        >
-          <a
-            href=""
-            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
-          >
-            <img
-              loading="lazy"
-              width="48"
-              height="50"
-              src="[##cms.cms.cdn##]/images/samandehi.png"
-              alt="samandehi"
-            />
+        <div class="flex flex-wrap lg:!gap-x-3 gap-x-12 lg:!flex-nowrap items-center gap-4 w-full lg:!w-[50%]">
+          <a href=""
+            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center">
+            <img loading="lazy" width="48" height="50" src="[##cms.cms.cdn##]/images/samandehi.png" alt="samandehi" />
           </a>
-          <a
-            target="_blank"
-            href="https://www.caa.gov.ir/"
-            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
-          >
-            <img
-              loading="lazy"
-              width="48"
-              height="50"
-              src="[##cms.cms.cdn##]/images/havapeymaii.png"
-              alt="havapeyma"
-          /></a>
-          <a
-            href=""
-            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
-          ></a>
-          <a
-            target="_blank"
-            href="https://www.caa.gov.ir/"
-            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
-            ><img
-              loading="lazy"
-              width="48"
-              height="50"
-              src="[##cms.cms.cdn##]/images/pax.png"
-              alt="pax"
-          /></a>
-          <a
-            href="https://www.mcth.ir/"
-            target="_blank"
-            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
-            ><img
-              loading="lazy"
-              width="48"
-              height="50"
-              src="[##cms.cms.cdn##]/images/farhangi.png"
-              alt="farhangi"
-          /></a>
-          <a
-            href="https://www.iata.org/"
-            target="_blank"
-            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"
-            ><img
-              loading="lazy"
-              width="48"
-              height="50"
-              src="[##cms.cms.cdn##]/images/lata.png"
-              alt="lata"
-          /></a>
+          <a target="_blank" href="https://www.caa.gov.ir/"
+            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center">
+            <img loading="lazy" width="48" height="50" src="[##cms.cms.cdn##]/images/havapeymaii.png"
+              alt="havapeyma" /></a>
+          <a referrerpolicy="origin" target="_blank"
+            href="https://trustseal.enamad.ir/?id=122286&Code=xetuxAbKZb54b1iS86Cx"
+            class="bg-white w-[65px] p-1 h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"><img
+              referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=122286&Code=xetuxAbKZb54b1iS86Cx"
+              alt="enamad" class="w-full h-full rounded-[10px]" code="xetuxAbKZb54b1iS86Cx" /></a>
+          <a referrerpolicy="origin" target="_blank"
+            href="https://trustseal.enamad.ir/?id=598638&Code=4eE9cHIsBoSIXyIJS2C4KzaTyPyW5T2w"
+            class="bg-white w-[65px] p-1 h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"><img
+              referrerpolicy="origin"
+              src="https://trustseal.enamad.ir/logo.aspx?id=598638&Code=4eE9cHIsBoSIXyIJS2C4KzaTyPyW5T2w" alt="enamad"
+              class="w-full h-full rounded-[10px]" code="4eE9cHIsBoSIXyIJS2C4KzaTyPyW5T2w" /></a>
+          <a target="_blank" href="https://www.caa.gov.ir/"
+            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"><img
+              loading="lazy" width="48" height="50" src="[##cms.cms.cdn##]/images/pax.png" alt="pax" /></a>
+          <a href="https://www.mcth.ir/" target="_blank"
+            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"><img
+              loading="lazy" width="48" height="50" src="[##cms.cms.cdn##]/images/farhangi.png" alt="farhangi" /></a>
+          <a href="https://www.iata.org/" target="_blank"
+            class="bg-white w-[65px] h-[65px] rounded-[10px] border border-zinc-300 flex justify-center items-center"><img
+              loading="lazy" width="48" height="50" src="[##cms.cms.cdn##]/images/lata.png" alt="lata" /></a>
         </div>
-        <div
-          class="flex lg:!flex-row flex-col lg:items-center gap-4 w-full lg:!w-[48%] justify-between"
-        >
+        <div class="flex lg:!flex-row flex-col lg:items-center gap-4 w-full lg:!w-[48%] justify-between">
           <p class="text-primary-950 font-bold lg:!text-2xl text-base">
             ما رو اینجا دنبال کنید
           </p>
@@ -244,31 +142,15 @@
             </a> -->
             <basis core="print" datamembername="db.info">
               <face filter="text in('اینستاگرام')">
-                <a
-                  href="@largetext"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="@text"
-                  class="hover:scale-125 transition-all duration-200"
-                  ><svg
-                    width="26"
-                    height="27"
-                    viewBox="0 0 26 27"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                <a href="@largetext" target="_blank" rel="noopener" aria-label="@text"
+                  class="hover:scale-125 transition-all duration-200"><svg width="26" height="27" viewBox="0 0 26 27"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M12.8397 10.8159C11.261 10.8159 9.97656 12.0982 9.97656 13.6759C9.97656 15.2536 11.261 16.5359 12.8397 16.5359C14.4185 16.5359 15.7018 15.2536 15.7018 13.6759C15.7018 12.0982 14.4185 10.8159 12.8397 10.8159Z"
-                      fill="#1647A9"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fill="#1647A9" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M18.0636 9.598C17.4708 9.598 16.9872 9.11752 16.9872 8.52784C16.9872 7.93608 17.4708 7.4556 18.0636 7.4556C18.6564 7.4556 19.1389 7.93608 19.1389 8.52784C19.1389 9.11752 18.6564 9.598 18.0636 9.598ZM12.8428 18.0958C10.405 18.0958 8.42068 16.1136 8.42068 13.6758C8.42068 11.2381 10.405 9.25584 12.8428 9.25584C15.2816 9.25584 17.2648 11.2381 17.2648 13.6758C17.2648 16.1136 15.2816 18.0958 12.8428 18.0958ZM17.3907 3.45264H8.61828C5.33292 3.45264 3.125 5.76352 3.125 9.20384V17.4614C3.125 20.9007 5.33292 23.2126 8.61828 23.2126H17.3896C20.676 23.2126 22.885 20.9007 22.885 17.4614V9.20384C22.885 5.76352 20.6771 3.45264 17.3907 3.45264Z"
-                      fill="#1647A9"
-                    />
+                      fill="#1647A9" />
                   </svg>
                 </a>
               </face>
@@ -276,25 +158,12 @@
 
             <basis core="print" datamembername="db.info">
               <face filter="text in('لینکدین')">
-                <a
-                  href="@largetext"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="@text"
-                  class="hover:scale-125 transition-all duration-200"
-                  ><svg
-                    width="26"
-                    height="27"
-                    viewBox="0 0 26 27"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                <a href="@largetext" target="_blank" rel="noopener" aria-label="@text"
+                  class="hover:scale-125 transition-all duration-200"><svg width="26" height="27" viewBox="0 0 26 27"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M18.18 16.7542C18.18 17.1848 17.8306 17.5342 17.4 17.5342C16.9695 17.5342 16.62 17.1848 16.62 16.7542V13.2078C16.62 12.1637 15.7735 11.315 14.7324 11.315C13.6914 11.315 12.8448 12.1637 12.8448 13.2078V16.7542C12.8448 17.1848 12.4954 17.5342 12.0648 17.5342C11.6343 17.5342 11.2848 17.1848 11.2848 16.7542V13.2078C11.2848 11.3036 12.8313 9.75504 14.7324 9.75504C16.6336 9.75504 18.18 11.3036 18.18 13.2078V16.7542ZM8.611 10.7326C8.18044 10.7326 7.79356 10.3416 7.79356 9.91104C7.79356 9.48048 8.18044 9.08944 8.611 9.08944C9.04156 9.08944 9.42636 9.48048 9.42636 9.91104C9.42636 10.3416 9.04156 10.7326 8.611 10.7326ZM9.38996 16.7542C9.38996 17.1848 9.04052 17.5342 8.60996 17.5342C8.1794 17.5342 7.82996 17.1848 7.82996 16.7542V12.8324C7.82996 12.4018 8.1794 12.0524 8.60996 12.0524C9.04052 12.0524 9.38996 12.4018 9.38996 12.8324V16.7542ZM17.3907 3.45264H8.61932C5.33292 3.45264 3.125 5.76456 3.125 9.20384V17.4614C3.125 20.9007 5.33292 23.2126 8.61932 23.2126H17.3896C20.676 23.2126 22.885 20.9007 22.885 17.4614V9.20384C22.885 5.76456 20.6771 3.45264 17.3907 3.45264Z"
-                      fill="#1647A9"
-                    />
+                      fill="#1647A9" />
                   </svg>
                 </a>
               </face>
@@ -302,25 +171,12 @@
 
             <basis core="print" datamembername="db.info">
               <face filter="text in('تلگرام')">
-                <a
-                  href="@largetext"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="@text"
-                  class="hover:scale-125 transition-all duration-200"
-                  ><svg
-                    width="22"
-                    height="19"
-                    viewBox="0 0 22 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                <a href="@largetext" target="_blank" rel="noopener" aria-label="@text"
+                  class="hover:scale-125 transition-all duration-200"><svg width="22" height="19" viewBox="0 0 22 19"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M11.5721 14.2923L9.17594 16.519C8.88263 16.7925 8.40527 16.5679 8.43231 16.1675C8.50719 15.0359 8.62367 13.3168 8.70167 12.3611C8.71415 12.2103 8.84103 12.0418 8.9617 11.9326C11.7603 9.39499 14.5652 6.86363 17.3691 4.3302C17.4731 4.2366 17.5958 4.00572 17.5313 3.88404C17.4585 3.74676 17.1226 3.78836 16.9832 3.87572C13.4223 6.11796 9.8613 8.35915 6.30551 10.6087C6.08711 10.7459 5.81983 10.7792 5.57439 10.7002C4.10799 10.2291 2.63327 9.78291 1.16375 9.31907C0.825753 9.21195 0.424313 9.10587 0.385833 8.68675C0.345273 8.24891 0.720713 8.04091 1.05975 7.90467C2.42631 7.35347 3.80223 6.82619 5.17607 6.2958C10.1182 4.39156 15.0603 2.48836 20.0023 0.585159C20.1677 0.521719 20.3882 0.482199 20.5608 0.447879C21.0787 0.343879 21.5447 0.603879 21.5956 1.12804C21.6341 1.5118 21.5665 1.93924 21.4864 2.31884C20.4568 7.21619 19.4137 12.1115 18.3716 17.0078C18.0908 18.3307 17.4107 18.5813 16.3155 17.7732C14.9043 16.7311 11.5721 14.2923 11.5721 14.2923Z"
-                      fill="#1647A9"
-                    />
+                      fill="#1647A9" />
                   </svg>
                 </a>
               </face>
@@ -386,37 +242,17 @@
       </div>
       <div class="flex items-center mt-3 gap-5 w-full lg:!flex-row flex-col">
         <div class="lg:!w-[30%] w-full flex lg:!justify-start justify-center">
-          <a
-            class="text-zinc-500 lg:!whitespace-nowrap text-sm text-center lg:!text-start"
-            href="https://www.basisfly.com/"
-            target="_blank"
-            >طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس فلای</a
-          >
+          <a class="text-zinc-500 lg:!whitespace-nowrap text-sm text-center lg:!text-start"
+            href="https://www.basisfly.com/" target="_blank">طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس
+            فلای</a>
         </div>
-        <div
-          class="flex items-center w-full lg:!w-[80%] justify-center gap-4 lg:!justify-between"
-        >
+        <div class="flex items-center w-full lg:!w-[80%] justify-center gap-4 lg:!justify-between">
           <a href="https://www.basisfly.com/" target="_blank">
-            <img
-              loading="lazy"
-              loading="lazy"
-              width="102"
-              height="26"
-              class="w-[68px] h-[17px]"
-              src="[##cms.cms.cdn##]/images/basisfly-logo.png"
-              alt="basisfly-logo"
-              aria-label="basisfly-logo"
-            />
+            <img loading="lazy" loading="lazy" width="102" height="26" class="w-[68px] h-[17px]"
+              src="[##cms.cms.cdn##]/images/basisfly-logo.png" alt="basisfly-logo" aria-label="basisfly-logo" />
           </a>
-          <img
-            loading="lazy"
-            loading="lazy"
-            width="135"
-            height="23"
-            src="[##cms.cms.cdn##]/images/Trust_logo.png"
-            alt="Trust_logo"
-            class="w-[68px] h-[17px]"
-          />
+          <img loading="lazy" loading="lazy" width="135" height="23" src="[##cms.cms.cdn##]/images/Trust_logo.png"
+            alt="Trust_logo" class="w-[68px] h-[17px]" />
         </div>
       </div>
     </div>
