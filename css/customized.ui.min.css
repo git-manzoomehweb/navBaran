@@ -1697,6 +1697,18 @@ input {
   transform: rotate(180deg) !important;
 }
 @media (min-width: 1024px) {
+  .payment__content [data-bc-question]:has(.contactUsInput) {
+    display: flex !important;
+    gap: 10px !important;
+  }
+  .payment__content
+    [data-bc-question]:has(.contactUsInput)
+    [data-bc-part-container] {
+    width: 100% !important;
+  }
+  .payment__content [data-bc-part].refresh {
+    display: inline-flex !important;
+  }
   .box-container:hover {
     border-bottom: 1px solid var(--primary-800) !important;
   }
@@ -2243,13 +2255,13 @@ a.set-parent .current-discount {
   .search-box-container .searchList ul.border-l.border-\[\#DADADA\] {
     border: none !important;
   }
-#search-box .FlightClass.hidden-box {
+  #search-box .FlightClass.hidden-box {
     padding-right: 1rem !important;
     overflow: hidden;
-}
-.FlightClass ul{
-  margin-top: 2rem !important;
-}
+  }
+  .FlightClass ul {
+    margin-top: 2rem !important;
+  }
   .hidden-box,
   .searchList,
   .passengerbox {
