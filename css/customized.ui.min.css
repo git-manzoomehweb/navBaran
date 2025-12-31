@@ -749,8 +749,9 @@ input {
   font-family: DanaFaNum !important;
 }
 :root {
-  --primary: #1647a9;
   --secondary: #031847;
+
+  --primary: #1647a9;
   --primary-50: #e3f2fe;
   --primary-100: #bbdcfb;
   --primary-200: #90c6fc;
@@ -762,6 +763,19 @@ input {
   --primary-800: #186cc4;
   --primary-900: #1647a9;
   --primary-950: #0a3386;
+
+  --secondary-50: #e9f1f8;
+  --secondary-100: #cfdfee;
+  --secondary-200: #b3cce3;
+  --secondary-300: #94b7d6;
+  --secondary-400: #6a9bc2;
+  --secondary-500: #4f85b0;
+  --secondary-600: #3f739c;
+  --secondary-700: #355f82;
+  --secondary-800: #2b4d68;
+  --secondary-900: #223a4f;
+  --secondary-950: #162836;
+
   --zinc-50: #f6f6f6;
   --zinc-100: #e4e4e5;
   --zinc-200: #c1c1c7;
@@ -2272,4 +2286,8 @@ a.set-parent .current-discount {
     -ms-border-radius: 0 !important;
     -o-border-radius: 0 !important;
   }
+}
+.book-rtl input[type="radio"],
+.book-rtl input[type="checkbox"] {
+  appearance: auto !important;
 }
